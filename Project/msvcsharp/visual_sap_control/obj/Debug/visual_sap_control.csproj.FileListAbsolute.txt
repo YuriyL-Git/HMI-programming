@@ -1,0 +1,4 @@
+C:\Users\LIpcheyy\Desktop\Manuals and documentations\Programming\Projects\controlsdk\NEW\cyclone sdk\controlsdk\examples\msvcsharp\visual_sap_control\obj\Debug\visual_sap_control.csprojResolveAssemblyReference.cache
+C:\Users\LIpcheyy\Desktop\Manuals and documentations\Programming\Projects\controlsdk\NEW\cyclone sdk\controlsdk\examples\msvcsharp\visual_sap_control\obj\Debug\visual_sap_control.Form1.resources
+C:\Users\LIpcheyy\Desktop\Manuals and documentations\Programming\Projects\controlsdk\NEW\cyclone sdk\controlsdk\examples\msvcsharp\visual_sap_control\obj\Debug\visual_sap_control.Properties.Resources.resources
+C:\Users\LIpcheyy\Desktop\Manuals and documentations\Programming\Projects\controlsdk\NEW\cyclone sdk\controlsdk\examples\msvcsharp\visual_sap_control\obj\Debug\visual_sap_control.csproj.GenerateResource.Cache

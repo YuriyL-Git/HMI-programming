@@ -1,0 +1,10 @@
+C:\HMI-VEL programming\controlsdk\Project\msvcsharp\bin\Release\msvcsharp.exe.config
+C:\HMI-VEL programming\controlsdk\Project\msvcsharp\bin\Release\msvcsharp.exe
+C:\HMI-VEL programming\controlsdk\Project\msvcsharp\bin\Release\msvcsharp.pdb
+C:\HMI-VEL programming\controlsdk\Project\msvcsharp\bin\Release\WindowScrape.dll
+C:\HMI-VEL programming\controlsdk\Project\msvcsharp\obj\x86\Release\msvcsharp.csprojResolveAssemblyReference.cache
+C:\HMI-VEL programming\controlsdk\Project\msvcsharp\obj\x86\Release\visual_sap_control.Form1.resources
+C:\HMI-VEL programming\controlsdk\Project\msvcsharp\obj\x86\Release\msvcsharp.visual_sap_control.Properties.Resources.resources
+C:\HMI-VEL programming\controlsdk\Project\msvcsharp\obj\x86\Release\msvcsharp.csproj.GenerateResource.Cache
+C:\HMI-VEL programming\controlsdk\Project\msvcsharp\obj\x86\Release\msvcsharp.exe
+C:\HMI-VEL programming\controlsdk\Project\msvcsharp\obj\x86\Release\msvcsharp.pdb
