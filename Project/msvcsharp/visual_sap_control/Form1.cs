@@ -395,7 +395,6 @@ namespace visual_sap_control
 		{
 			cyclone_control_api.disconnectFromAllCyclones();
 			
-			
 		}
 
 		private UInt32 convert_dropboxindex_to_connectiontype(int index)
@@ -617,11 +616,7 @@ namespace visual_sap_control
 			}
 			
 		}
-//		void BackgroundWorker1DoWork(object sender, DoWorkEventArgs e)
-//		{
-//
-//		}
-		
+
 		private int BackgroundProcessLogicMethod(BackgroundWorker bw, int a)
 		{
 			int result = 0;
@@ -631,10 +626,8 @@ namespace visual_sap_control
 		void BackgroundWorker1RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
 		{
 			
-			
 			this.timer1.Start();
 			backgroundWorker1.RunWorkerAsync(100);
-			
 		}
 		void Timer1Tick(object sender, EventArgs e)
 		{
@@ -659,19 +652,12 @@ namespace visual_sap_control
 			
 			
 		}
-//		void TextBox1TextChanged(object sender, EventArgs e)
-//		{
-//			
-//		}
 		void BackgroundWorker2DoWork(object sender, DoWorkEventArgs e)
 		{
 			ExecuteProgram();
 			
 		}
-		void BackgroundWorker2RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-		{
-			
-		}
+
 		void Form1Activated(object sender, EventArgs e)
 		{
 			GlobalVar.FormActiveFocusFlag = false;
@@ -705,10 +691,7 @@ namespace visual_sap_control
 			ProgrammingBar.Value = e.ProgressPercentage;
 			
 		}
-		void ProgressBar1Click(object sender, EventArgs e)
-		{
-			
-		}
+
 		void Form1DoubleClick(object sender, EventArgs e)
 		{
 			this.WindowState = FormWindowState.Minimized;
@@ -795,21 +778,9 @@ namespace visual_sap_control
 		{
 			nfcInitBar.Value = e.ProgressPercentage;
 			
-			
 		}
-		void BackgroundWaitingRunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-		{
-			
-			
-		}
-		void Label12TextChanged(object sender, EventArgs e)
-		{
-			
-		}
-		void Form1TextChanged(object sender, EventArgs e)
-		{
-			
-		}
+
+	
 		void Form1Paint(object sender, PaintEventArgs e)
 		{
 			Graphics gs = this.CreateGraphics();
@@ -832,6 +803,11 @@ namespace visual_sap_control
            
          gs.DrawLine(p1, new Point(0, this.Height-1), new Point(this.Width,this.Height-1 ));
          GlobalVar.painted =true;
+	
+		}
+		void Button7Click(object sender, EventArgs e)
+		{
+			
 	
 		}
 		

@@ -74,6 +74,7 @@ namespace visual_sap_control
         	this.SetSerialLabel = new System.Windows.Forms.Label();
         	this.NfcInitLabel = new System.Windows.Forms.Label();
         	this.SerNumLabel = new System.Windows.Forms.Label();
+        	this.button7 = new System.Windows.Forms.Button();
         	((System.ComponentModel.ISupportInitialize)(this.OkWait)).BeginInit();
         	((System.ComponentModel.ISupportInitialize)(this.OkProg)).BeginInit();
         	((System.ComponentModel.ISupportInitialize)(this.OkSet)).BeginInit();
@@ -166,7 +167,7 @@ namespace visual_sap_control
         	this.label12.Size = new System.Drawing.Size(263, 15);
         	this.label12.TabIndex = 33;
         	this.label12.Text = "label12";
-        	this.label12.TextChanged += new System.EventHandler(this.Label12TextChanged);
+        	
         	// 
         	// button3
         	// 
@@ -200,7 +201,6 @@ namespace visual_sap_control
         	this.textBox1.Name = "textBox1";
         	this.textBox1.Size = new System.Drawing.Size(276, 40);
         	this.textBox1.TabIndex = 0;
-        	//this.textBox1.TextChanged += new System.EventHandler(this.TextBox1TextChanged);
         	this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox1KeyPress);
         	// 
         	// label1
@@ -225,7 +225,6 @@ namespace visual_sap_control
         	// backgroundWorker1
         	// 
         	this.backgroundWorker1.WorkerSupportsCancellation = true;
-        	//this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BackgroundWorker1DoWork);
         	this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BackgroundWorker1RunWorkerCompleted);
         	// 
         	// timer1
@@ -306,7 +305,7 @@ namespace visual_sap_control
         	// 
         	this.backgroundWorker2.WorkerSupportsCancellation = true;
         	this.backgroundWorker2.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BackgroundWorker2DoWork);
-        	this.backgroundWorker2.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BackgroundWorker2RunWorkerCompleted);
+        
         	// 
         	// backgroundProgramming
         	// 
@@ -323,7 +322,7 @@ namespace visual_sap_control
         	this.ProgrammingBar.Size = new System.Drawing.Size(349, 25);
         	this.ProgrammingBar.Step = 1;
         	this.ProgrammingBar.TabIndex = 50;
-        	this.ProgrammingBar.Click += new System.EventHandler(this.ProgressBar1Click);
+        	
         	// 
         	// waitingBar
         	// 
@@ -360,7 +359,6 @@ namespace visual_sap_control
         	this.backgroundWaiting.WorkerSupportsCancellation = true;
         	this.backgroundWaiting.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BackgroundWaitingDoWork);
         	this.backgroundWaiting.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.BackgroundWaitingProgressChanged);
-        	this.backgroundWaiting.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BackgroundWaitingRunWorkerCompleted);
         	// 
         	// backgroundSetSerial
         	// 
@@ -517,6 +515,16 @@ namespace visual_sap_control
         	this.SerNumLabel.TabIndex = 67;
         	this.SerNumLabel.Text = "Serial Number: ";
         	// 
+        	// button7
+        	// 
+        	this.button7.Location = new System.Drawing.Point(691, 272);
+        	this.button7.Name = "button7";
+        	this.button7.Size = new System.Drawing.Size(130, 69);
+        	this.button7.TabIndex = 68;
+        	this.button7.Text = "TestButton";
+        	this.button7.UseVisualStyleBackColor = true;
+        	this.button7.Click += new System.EventHandler(this.Button7Click);
+        	// 
         	// Form1
         	// 
         	this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
@@ -525,6 +533,7 @@ namespace visual_sap_control
         	this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
         	this.ClientSize = new System.Drawing.Size(860, 579);
         	this.ControlBox = false;
+        	this.Controls.Add(this.button7);
         	this.Controls.Add(this.SerNumLabel);
         	this.Controls.Add(this.NfcInitLabel);
         	this.Controls.Add(this.SetSerialLabel);
@@ -574,7 +583,7 @@ namespace visual_sap_control
         	this.Activated += new System.EventHandler(this.Form1Activated);
         	this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
         	this.Load += new System.EventHandler(this.Form1Load);
-        	this.TextChanged += new System.EventHandler(this.Form1TextChanged);
+      
         	this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1Paint);
         	this.DoubleClick += new System.EventHandler(this.Form1DoubleClick);
         	((System.ComponentModel.ISupportInitialize)(this.OkWait)).EndInit();
@@ -642,6 +651,7 @@ namespace visual_sap_control
         private System.Windows.Forms.Label SetSerialLabel;
         private System.Windows.Forms.Label NfcInitLabel;
         private System.Windows.Forms.Label SerNumLabel;
+        private System.Windows.Forms.Button button7;
     }
 }
 
