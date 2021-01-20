@@ -51,7 +51,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="visual_sap_control\app.config" />
-    <None Include="visual_sap_control\msvcsharp.csproj" />
     <None Include="visual_sap_control\msvcsharp.csproj.user" />
     <None Include="visual_sap_control\msvcsharp.sln" />
     <None Include="visual_sap_control\Properties\Settings.settings" />

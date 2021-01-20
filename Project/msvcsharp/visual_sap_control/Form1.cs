@@ -100,6 +100,26 @@ namespace visual_sap_control
 			
 		}
 		
+		public static void CycloneInit (String portname )
+		{
+			UInt32 connection_type = cyclone_control_api.CyclonePortType_USB;
+			UInt32 handle = 0;
+			//label12.Text = "Contacting IP1 ... ";
+			Application.DoEvents();
+			//connection_type = convert_dropboxindex_to_connectiontype(2);
+			handle = cyclone_control_api.connectToCyclone(portname);
+			if (handle == 0) {
+				MessageBox.Show("Error Opening Device");
+				//label12.Text = "Error Opening Device";
+			} else 
+			{
+				//label12.Text = cyclone_control_api.getPropertyValue(handle, 0, cyclone_control_api.CycloneProperties, cyclone_control_api.selectCyclonePropertyName);
+				//MessageBox.Show(cyclone_control_api.getPropertyValue(handle, 0, cyclone_control_api.CycloneProperties, cyclone_control_api.selectCyclonePropertyName));
+				MessageBox.Show(cyclone_control_api.getImageDescription(handle,1));
+				cyclone_control_api.startImageExecution(handle, 1);
+			}
+		}
+		
 		//Main procedure----------------------------------------------
 		public void ExecuteProgram()
 		{
@@ -207,9 +227,6 @@ namespace visual_sap_control
 					
 					for (int j = 0; j < 3; j++) {
 						for (int i = 0; i < 3; i++) {
-							
-							
-							
 							
 							if (j == 0 && i==0) {
 								backgroundSetSerial.RunWorkerAsync();
@@ -551,9 +568,9 @@ namespace visual_sap_control
 		void Form1Load(object sender, EventArgs e)
 		{
 			GlobalVar.FormActiveFocusFlag = false;
-			button4.PerformClick();
+		//	button4.PerformClick();
 			this.Size = new Size(900, 750);
-			this.timer1.Start();
+			//this.timer1.Start();
 			ReallyCenterToScreen();
 			
 			this.TopMost = true;
@@ -732,7 +749,8 @@ namespace visual_sap_control
 							
 					}
 				
-					if (!GlobalVar.boardPassed) {
+					if (!GlobalVar.boardPassed) 
+					{
 						backgroundSetSerial.ReportProgress(0);
 						NokSet.Visible = true;
 						break;
@@ -772,7 +790,6 @@ namespace visual_sap_control
 						
 				}
 			}
-			
 		}
 		void BackgroundWriteInitProgressChanged(object sender, ProgressChangedEventArgs e)
 		{
@@ -807,8 +824,7 @@ namespace visual_sap_control
 		}
 		void Button7Click(object sender, EventArgs e)
 		{
-			
-	
+			CycloneInit(TextBoxTest.Text);
 		}
 		
 	}

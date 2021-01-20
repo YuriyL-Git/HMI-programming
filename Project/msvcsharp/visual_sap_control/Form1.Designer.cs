@@ -75,6 +75,7 @@ namespace visual_sap_control
         	this.NfcInitLabel = new System.Windows.Forms.Label();
         	this.SerNumLabel = new System.Windows.Forms.Label();
         	this.button7 = new System.Windows.Forms.Button();
+        	this.TextBoxTest = new System.Windows.Forms.TextBox();
         	((System.ComponentModel.ISupportInitialize)(this.OkWait)).BeginInit();
         	((System.ComponentModel.ISupportInitialize)(this.OkProg)).BeginInit();
         	((System.ComponentModel.ISupportInitialize)(this.OkSet)).BeginInit();
@@ -94,7 +95,7 @@ namespace visual_sap_control
 			"Serial"});
         	this.combo1.Location = new System.Drawing.Point(12, 12);
         	this.combo1.Name = "combo1";
-        	this.combo1.Size = new System.Drawing.Size(32, 31);
+        	this.combo1.Size = new System.Drawing.Size(32, 21);
         	this.combo1.TabIndex = 0;
         	this.combo1.Visible = false;
         	// 
@@ -102,7 +103,7 @@ namespace visual_sap_control
         	// 
         	this.Edit1.Location = new System.Drawing.Point(151, 180);
         	this.Edit1.Name = "Edit1";
-        	this.Edit1.Size = new System.Drawing.Size(165, 29);
+        	this.Edit1.Size = new System.Drawing.Size(165, 22);
         	this.Edit1.TabIndex = 6;
         	this.Edit1.Text = "COM2";
         	this.Edit1.Visible = false;
@@ -112,7 +113,7 @@ namespace visual_sap_control
         	this.label2.AutoSize = true;
         	this.label2.Location = new System.Drawing.Point(415, 52);
         	this.label2.Name = "label2";
-        	this.label2.Size = new System.Drawing.Size(93, 23);
+        	this.label2.Size = new System.Drawing.Size(62, 13);
         	this.label2.TabIndex = 11;
         	this.label2.Text = "Cyclone1 : ";
         	this.label2.Visible = false;
@@ -122,7 +123,7 @@ namespace visual_sap_control
         	this.label7.AutoSize = true;
         	this.label7.Location = new System.Drawing.Point(406, 15);
         	this.label7.Name = "label7";
-        	this.label7.Size = new System.Drawing.Size(152, 23);
+        	this.label7.Size = new System.Drawing.Size(100, 13);
         	this.label7.TabIndex = 21;
         	this.label7.Text = "Image to Execute: ";
         	this.label7.Visible = false;
@@ -131,7 +132,7 @@ namespace visual_sap_control
         	// 
         	this.Edit6.Location = new System.Drawing.Point(504, 12);
         	this.Edit6.Name = "Edit6";
-        	this.Edit6.Size = new System.Drawing.Size(36, 29);
+        	this.Edit6.Size = new System.Drawing.Size(36, 22);
         	this.Edit6.TabIndex = 26;
         	this.Edit6.Text = "1";
         	this.Edit6.Visible = false;
@@ -167,7 +168,6 @@ namespace visual_sap_control
         	this.label12.Size = new System.Drawing.Size(263, 15);
         	this.label12.TabIndex = 33;
         	this.label12.Text = "label12";
-        	
         	// 
         	// button3
         	// 
@@ -199,7 +199,7 @@ namespace visual_sap_control
         	this.textBox1.ForeColor = System.Drawing.SystemColors.GrayText;
         	this.textBox1.Location = new System.Drawing.Point(153, 120);
         	this.textBox1.Name = "textBox1";
-        	this.textBox1.Size = new System.Drawing.Size(276, 40);
+        	this.textBox1.Size = new System.Drawing.Size(276, 29);
         	this.textBox1.TabIndex = 0;
         	this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox1KeyPress);
         	// 
@@ -207,7 +207,7 @@ namespace visual_sap_control
         	// 
         	this.label1.Location = new System.Drawing.Point(53, 78);
         	this.label1.Name = "label1";
-        	this.label1.Size = new System.Drawing.Size(263, 15);
+        	this.label1.Size = new System.Drawing.Size(263, 23);
         	this.label1.TabIndex = 41;
         	this.label1.Text = "Info";
         	this.label1.Visible = false;
@@ -305,7 +305,6 @@ namespace visual_sap_control
         	// 
         	this.backgroundWorker2.WorkerSupportsCancellation = true;
         	this.backgroundWorker2.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BackgroundWorker2DoWork);
-        
         	// 
         	// backgroundProgramming
         	// 
@@ -322,7 +321,6 @@ namespace visual_sap_control
         	this.ProgrammingBar.Size = new System.Drawing.Size(349, 25);
         	this.ProgrammingBar.Step = 1;
         	this.ProgrammingBar.TabIndex = 50;
-        	
         	// 
         	// waitingBar
         	// 
@@ -378,7 +376,7 @@ namespace visual_sap_control
         	// 
         	this.TopicLabel.BackColor = System.Drawing.Color.LightCyan;
         	this.TopicLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-        	this.TopicLabel.Font = new System.Drawing.Font("Lucida Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+        	this.TopicLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         	this.TopicLabel.ForeColor = System.Drawing.Color.ForestGreen;
         	this.TopicLabel.Location = new System.Drawing.Point(139, 15);
         	this.TopicLabel.Name = "TopicLabel";
@@ -470,7 +468,7 @@ namespace visual_sap_control
         	this.WaitingLabel.ForeColor = System.Drawing.Color.Green;
         	this.WaitingLabel.Location = new System.Drawing.Point(29, 269);
         	this.WaitingLabel.Name = "WaitingLabel";
-        	this.WaitingLabel.Size = new System.Drawing.Size(170, 25);
+        	this.WaitingLabel.Size = new System.Drawing.Size(170, 47);
         	this.WaitingLabel.TabIndex = 63;
         	this.WaitingLabel.Text = "Waiting for start:";
         	// 
@@ -480,7 +478,7 @@ namespace visual_sap_control
         	this.ProgramingLabel.ForeColor = System.Drawing.Color.Green;
         	this.ProgramingLabel.Location = new System.Drawing.Point(29, 316);
         	this.ProgramingLabel.Name = "ProgramingLabel";
-        	this.ProgramingLabel.Size = new System.Drawing.Size(170, 25);
+        	this.ProgramingLabel.Size = new System.Drawing.Size(170, 34);
         	this.ProgramingLabel.TabIndex = 64;
         	this.ProgramingLabel.Text = "Programming:";
         	// 
@@ -490,7 +488,7 @@ namespace visual_sap_control
         	this.SetSerialLabel.ForeColor = System.Drawing.Color.Green;
         	this.SetSerialLabel.Location = new System.Drawing.Point(29, 364);
         	this.SetSerialLabel.Name = "SetSerialLabel";
-        	this.SetSerialLabel.Size = new System.Drawing.Size(170, 25);
+        	this.SetSerialLabel.Size = new System.Drawing.Size(170, 37);
         	this.SetSerialLabel.TabIndex = 65;
         	this.SetSerialLabel.Text = "Set Serial Num:";
         	// 
@@ -500,7 +498,7 @@ namespace visual_sap_control
         	this.NfcInitLabel.ForeColor = System.Drawing.Color.Green;
         	this.NfcInitLabel.Location = new System.Drawing.Point(29, 413);
         	this.NfcInitLabel.Name = "NfcInitLabel";
-        	this.NfcInitLabel.Size = new System.Drawing.Size(170, 25);
+        	this.NfcInitLabel.Size = new System.Drawing.Size(170, 37);
         	this.NfcInitLabel.TabIndex = 66;
         	this.NfcInitLabel.Text = "Nfc Initialization:";
         	// 
@@ -511,7 +509,7 @@ namespace visual_sap_control
         	this.SerNumLabel.ForeColor = System.Drawing.Color.DarkSlateGray;
         	this.SerNumLabel.Location = new System.Drawing.Point(205, 468);
         	this.SerNumLabel.Name = "SerNumLabel";
-        	this.SerNumLabel.Size = new System.Drawing.Size(373, 29);
+        	this.SerNumLabel.Size = new System.Drawing.Size(373, 52);
         	this.SerNumLabel.TabIndex = 67;
         	this.SerNumLabel.Text = "Serial Number: ";
         	// 
@@ -525,14 +523,23 @@ namespace visual_sap_control
         	this.button7.UseVisualStyleBackColor = true;
         	this.button7.Click += new System.EventHandler(this.Button7Click);
         	// 
+        	// TextBoxTest
+        	// 
+        	this.TextBoxTest.Location = new System.Drawing.Point(685, 372);
+        	this.TextBoxTest.Name = "TextBoxTest";
+        	this.TextBoxTest.Size = new System.Drawing.Size(126, 22);
+        	this.TextBoxTest.TabIndex = 69;
+        	this.TextBoxTest.Text = "USB1";
+        	// 
         	// Form1
         	// 
-        	this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
+        	this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         	this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         	this.BackColor = System.Drawing.Color.LightCyan;
         	this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-        	this.ClientSize = new System.Drawing.Size(860, 579);
+        	this.ClientSize = new System.Drawing.Size(963, 650);
         	this.ControlBox = false;
+        	this.Controls.Add(this.TextBoxTest);
         	this.Controls.Add(this.button7);
         	this.Controls.Add(this.SerNumLabel);
         	this.Controls.Add(this.NfcInitLabel);
@@ -583,7 +590,6 @@ namespace visual_sap_control
         	this.Activated += new System.EventHandler(this.Form1Activated);
         	this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
         	this.Load += new System.EventHandler(this.Form1Load);
-      
         	this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1Paint);
         	this.DoubleClick += new System.EventHandler(this.Form1DoubleClick);
         	((System.ComponentModel.ISupportInitialize)(this.OkWait)).EndInit();
@@ -652,6 +658,7 @@ namespace visual_sap_control
         private System.Windows.Forms.Label NfcInitLabel;
         private System.Windows.Forms.Label SerNumLabel;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.TextBox TextBoxTest;
     }
 }
 
