@@ -190,7 +190,7 @@ namespace visual_sap_control
         	this.button4.Text = "Connect";
         	this.button4.UseVisualStyleBackColor = true;
         	this.button4.Visible = false;
-        	this.button4.Click += new System.EventHandler(this.Button4Click);
+        	
         	// 
         	// textBox1
         	// 

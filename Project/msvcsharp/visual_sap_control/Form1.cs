@@ -548,27 +548,11 @@ namespace visual_sap_control
 
 		}
 		
+		 
 		
-		//Cyclone initialization
-		void Button4Click(object sender, EventArgs e)
-		{
-			UInt32 connection_type = cyclone_control_api.CyclonePortType_Serial;
-			UInt32 handle = 0;
-			label12.Text = "Contacting IP1 ... ";
-			Application.DoEvents();
-			connection_type = convert_dropboxindex_to_connectiontype(2);
-			handle = cyclone_control_api.connectToCyclone("COM1");
-			if (handle == 0) {
-				label12.Text = "Error Opening Device";
-			} else {
-				label12.Text = cyclone_control_api.getPropertyValue(handle, 0, cyclone_control_api.CycloneProperties, cyclone_control_api.selectCyclonePropertyName);
-			}
-			
-		}
 		void Form1Load(object sender, EventArgs e)
 		{
 			GlobalVar.FormActiveFocusFlag = false;
-		//	button4.PerformClick();
 			this.Size = new Size(900, 750);
 			//this.timer1.Start();
 			ReallyCenterToScreen();
