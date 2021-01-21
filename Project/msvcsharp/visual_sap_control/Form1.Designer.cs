@@ -38,8 +38,6 @@ namespace visual_sap_control
         	this.button1 = new System.Windows.Forms.Button();
         	this.button2 = new System.Windows.Forms.Button();
         	this.label12 = new System.Windows.Forms.Label();
-        	this.button3 = new System.Windows.Forms.Button();
-        	this.button4 = new System.Windows.Forms.Button();
         	this.textBox1 = new System.Windows.Forms.TextBox();
         	this.label1 = new System.Windows.Forms.Label();
         	this.ProgrammingPassCheckBox = new System.Windows.Forms.CheckBox();
@@ -95,7 +93,7 @@ namespace visual_sap_control
 			"Serial"});
         	this.combo1.Location = new System.Drawing.Point(12, 12);
         	this.combo1.Name = "combo1";
-        	this.combo1.Size = new System.Drawing.Size(32, 21);
+        	this.combo1.Size = new System.Drawing.Size(32, 31);
         	this.combo1.TabIndex = 0;
         	this.combo1.Visible = false;
         	// 
@@ -103,7 +101,7 @@ namespace visual_sap_control
         	// 
         	this.Edit1.Location = new System.Drawing.Point(151, 180);
         	this.Edit1.Name = "Edit1";
-        	this.Edit1.Size = new System.Drawing.Size(165, 22);
+        	this.Edit1.Size = new System.Drawing.Size(165, 29);
         	this.Edit1.TabIndex = 6;
         	this.Edit1.Text = "COM2";
         	this.Edit1.Visible = false;
@@ -113,7 +111,7 @@ namespace visual_sap_control
         	this.label2.AutoSize = true;
         	this.label2.Location = new System.Drawing.Point(415, 52);
         	this.label2.Name = "label2";
-        	this.label2.Size = new System.Drawing.Size(62, 13);
+        	this.label2.Size = new System.Drawing.Size(93, 23);
         	this.label2.TabIndex = 11;
         	this.label2.Text = "Cyclone1 : ";
         	this.label2.Visible = false;
@@ -123,7 +121,7 @@ namespace visual_sap_control
         	this.label7.AutoSize = true;
         	this.label7.Location = new System.Drawing.Point(406, 15);
         	this.label7.Name = "label7";
-        	this.label7.Size = new System.Drawing.Size(100, 13);
+        	this.label7.Size = new System.Drawing.Size(152, 23);
         	this.label7.TabIndex = 21;
         	this.label7.Text = "Image to Execute: ";
         	this.label7.Visible = false;
@@ -132,7 +130,7 @@ namespace visual_sap_control
         	// 
         	this.Edit6.Location = new System.Drawing.Point(504, 12);
         	this.Edit6.Name = "Edit6";
-        	this.Edit6.Size = new System.Drawing.Size(36, 22);
+        	this.Edit6.Size = new System.Drawing.Size(36, 29);
         	this.Edit6.TabIndex = 26;
         	this.Edit6.Text = "1";
         	this.Edit6.Visible = false;
@@ -169,29 +167,6 @@ namespace visual_sap_control
         	this.label12.TabIndex = 33;
         	this.label12.Text = "label12";
         	// 
-        	// button3
-        	// 
-        	this.button3.Location = new System.Drawing.Point(546, 216);
-        	this.button3.Name = "button3";
-        	this.button3.Size = new System.Drawing.Size(203, 23);
-        	this.button3.TabIndex = 38;
-        	this.button3.Text = "Display Name\r\n\r\n";
-        	this.button3.UseVisualStyleBackColor = true;
-        	this.button3.Visible = false;
-        	this.button3.Click += new System.EventHandler(this.button3_Click);
-        	// 
-        	// button4
-        	// 
-        	this.button4.ForeColor = System.Drawing.Color.Tan;
-        	this.button4.Location = new System.Drawing.Point(415, 78);
-        	this.button4.Name = "button4";
-        	this.button4.Size = new System.Drawing.Size(89, 23);
-        	this.button4.TabIndex = 39;
-        	this.button4.Text = "Connect";
-        	this.button4.UseVisualStyleBackColor = true;
-        	this.button4.Visible = false;
-        	
-        	// 
         	// textBox1
         	// 
         	this.textBox1.BackColor = System.Drawing.SystemColors.Window;
@@ -199,7 +174,7 @@ namespace visual_sap_control
         	this.textBox1.ForeColor = System.Drawing.SystemColors.GrayText;
         	this.textBox1.Location = new System.Drawing.Point(153, 120);
         	this.textBox1.Name = "textBox1";
-        	this.textBox1.Size = new System.Drawing.Size(276, 29);
+        	this.textBox1.Size = new System.Drawing.Size(276, 40);
         	this.textBox1.TabIndex = 0;
         	this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox1KeyPress);
         	// 
@@ -527,13 +502,13 @@ namespace visual_sap_control
         	// 
         	this.TextBoxTest.Location = new System.Drawing.Point(685, 372);
         	this.TextBoxTest.Name = "TextBoxTest";
-        	this.TextBoxTest.Size = new System.Drawing.Size(126, 22);
+        	this.TextBoxTest.Size = new System.Drawing.Size(126, 29);
         	this.TextBoxTest.TabIndex = 69;
         	this.TextBoxTest.Text = "USB1";
         	// 
         	// Form1
         	// 
-        	this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+        	this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
         	this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         	this.BackColor = System.Drawing.Color.LightCyan;
         	this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -567,8 +542,6 @@ namespace visual_sap_control
         	this.Controls.Add(this.ProgrammingPassCheckBox);
         	this.Controls.Add(this.label1);
         	this.Controls.Add(this.textBox1);
-        	this.Controls.Add(this.button4);
-        	this.Controls.Add(this.button3);
         	this.Controls.Add(this.label12);
         	this.Controls.Add(this.button2);
         	this.Controls.Add(this.button1);
@@ -621,8 +594,6 @@ namespace visual_sap_control
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox ProgrammingPassCheckBox;
