@@ -225,7 +225,6 @@ namespace visual_sap_control
 				
 				
 				backgroundProgramming.RunWorkerAsync();
-			//	MessageBox.Show("Work started");
 				CycloneExecuteProgramming(); // execute programming board procedure
 				
 				DateTime now = new DateTime();
@@ -290,7 +289,7 @@ namespace visual_sap_control
 							NokSet.Visible = false;
 							NokNfc.Visible = false;
 							OkSet.Visible = false;
-							
+			
 							this.TopMost = false;
 							this.SendToBack();
 							
@@ -301,7 +300,6 @@ namespace visual_sap_control
 							int p = 1;
 							while (!FileIsReady(pathToUtlDirectory + @"\utl070.ans") && p < 50) {
 								Thread.Sleep(100);
-								//timer2.Start();
 								p++;
 								
 							}
@@ -314,7 +312,6 @@ namespace visual_sap_control
 								failMessage = "SetSerialNumber";
 								GlobalVar.boardPassed = false;
 								NokSet.Visible = true;
-								//backgroundSetSerial.CancelAsync();
 								continue;
 							}
 							string result = File.ReadAllText(pathToUtlDirectory + @"\utl070.ans");
@@ -335,7 +332,7 @@ namespace visual_sap_control
 								Thread.Sleep(2000);
 								NokSet.Visible = true;
 								this.BringToFront();
-								//backgroundSetSerial.CancelAsync();
+							
 							}
 							
 						}
@@ -357,8 +354,6 @@ namespace visual_sap_control
 								backgroundWriteInit.RunWorkerAsync();
 							}
 							
-							
-							
 							File.Copy(pathToUtlDirectory + @"\commands\nfc_write_init\utl070.cmd", pathToUtlDirectory + @"\utl070.cmd");
 							int p = 1;
 							while (!FileIsReady(pathToUtlDirectory + @"\utl070.ans") && p < 200) {
@@ -377,8 +372,6 @@ namespace visual_sap_control
 								GlobalVar.boardPassed = false;
 								NokNfc.Visible = true;
 								nfcInitBar.Value = 0;
-								//backgroundWriteInit.CancelAsync();
-								//backgroundSetSerial.CancelAsync();
 								Thread.Sleep(100);
 								continue; // - repeat full cycle, if ans file is not present
 							}
@@ -399,8 +392,7 @@ namespace visual_sap_control
 								this.BringToFront();
 								GlobalVar.boardPassed = false;
 								failMessage = "WriteNfcInitialization";
-								//backgroundSetSerial.CancelAsync();
-								//backgroundWriteInit.CancelAsync();
+		
 								NokNfc.Visible = true;
 								continue;
 							}
@@ -612,13 +604,7 @@ namespace visual_sap_control
 			return 0;
 		}
 		
-		void BackgroundWorker1DoWork(object sender, DoWorkEventArgs e)
-																	  
-		{
-//			this.BringToFront();
-//			this.Activate();
-		}
-		
+
 		void BackgroundWorker1RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
 		{
 			this.timer1.Start();
