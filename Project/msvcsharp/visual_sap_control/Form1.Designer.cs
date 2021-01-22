@@ -35,11 +35,9 @@ namespace visual_sap_control
         	this.label2 = new System.Windows.Forms.Label();
         	this.label7 = new System.Windows.Forms.Label();
         	this.Edit6 = new System.Windows.Forms.TextBox();
-        	this.button1 = new System.Windows.Forms.Button();
         	this.button2 = new System.Windows.Forms.Button();
         	this.label12 = new System.Windows.Forms.Label();
         	this.textBox1 = new System.Windows.Forms.TextBox();
-        	this.label1 = new System.Windows.Forms.Label();
         	this.ProgrammingPassCheckBox = new System.Windows.Forms.CheckBox();
         	this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
         	this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -137,17 +135,6 @@ namespace visual_sap_control
         	this.Edit6.Text = "1";
         	this.Edit6.Visible = false;
         	// 
-        	// button1
-        	// 
-        	this.button1.Location = new System.Drawing.Point(518, 78);
-        	this.button1.Name = "button1";
-        	this.button1.Size = new System.Drawing.Size(22, 23);
-        	this.button1.TabIndex = 31;
-        	this.button1.Text = "Read Image Description\r\n";
-        	this.button1.UseVisualStyleBackColor = true;
-        	this.button1.Visible = false;
-        	this.button1.Click += new System.EventHandler(this.button1_Click);
-        	// 
         	// button2
         	// 
         	this.button2.BackColor = System.Drawing.Color.Honeydew;
@@ -179,15 +166,6 @@ namespace visual_sap_control
         	this.textBox1.Size = new System.Drawing.Size(276, 29);
         	this.textBox1.TabIndex = 0;
         	this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox1KeyPress);
-        	// 
-        	// label1
-        	// 
-        	this.label1.Location = new System.Drawing.Point(53, 78);
-        	this.label1.Name = "label1";
-        	this.label1.Size = new System.Drawing.Size(263, 23);
-        	this.label1.TabIndex = 41;
-        	this.label1.Text = "Info";
-        	this.label1.Visible = false;
         	// 
         	// ProgrammingPassCheckBox
         	// 
@@ -561,11 +539,9 @@ namespace visual_sap_control
         	this.Controls.Add(this.WriteNFCcheckBox);
         	this.Controls.Add(this.SetSerialCheckBox);
         	this.Controls.Add(this.ProgrammingPassCheckBox);
-        	this.Controls.Add(this.label1);
         	this.Controls.Add(this.textBox1);
         	this.Controls.Add(this.label12);
         	this.Controls.Add(this.button2);
-        	this.Controls.Add(this.button1);
         	this.Controls.Add(this.Edit6);
         	this.Controls.Add(this.label7);
         	this.Controls.Add(this.label2);
@@ -612,11 +588,9 @@ namespace visual_sap_control
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox Edit6;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox ProgrammingPassCheckBox;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Timer timer1;

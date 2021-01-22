@@ -191,8 +191,7 @@ namespace visual_sap_control
 			
 			int index = serialNumber.IndexOf("NS");
 			if (index != 6) {
-				//wrong barcode
-				label1.Text = "Wrong barcode";
+					
 				SerNumLabel.Text = "Serial Number: INCORRECT BARCODE";
 			} else {
 				SerNumLabel.Text = "Serial Number: " + serialNumber;
@@ -223,10 +222,9 @@ namespace visual_sap_control
 				}
 				
 				if (GlobalVar.ProgrammingPassCheckBox) {
-					label1.Text = "Programing passed";
 					OkProg.Visible = true;
 				} else {
-					label1.Text = "Programming fail";
+
 					failMessage = "Programming fail";
 					GlobalVar.boardPassed = false;
 					NokProg.Visible = true;
@@ -491,24 +489,6 @@ namespace visual_sap_control
 
 
 
-		private void button1_Click(object sender, EventArgs e)
-		{
-			UInt32 connection_type = cyclone_control_api.CyclonePortType_USB;
-			UInt32 handle = 0;
-
-			label1.Text = "";
-
-			label1.Text = "Contacting IP1 ... ";
-			Application.DoEvents();
-			connection_type = convert_dropboxindex_to_connectiontype(2);
-			handle = cyclone_control_api.connectToCyclone(Edit1.Text);
-			if (handle == 0) {
-				label12.Text = "Error Opening Device";
-			} else {
-				label12.Text = cyclone_control_api.getImageDescription(handle, Convert.ToUInt32(Edit6.Text));
-			}
-			
-		}
 
 		private void button2_Click(object sender, EventArgs e)
 		{
@@ -532,7 +512,7 @@ namespace visual_sap_control
 					label12.Text = "Error Opening Device";
 					cyclone1enabled = false;
 				} else {
-					label1.Text = "Programming Image on IP1 ... ";
+			
 					cyclone_control_api.startImageExecution(handle1, Convert.ToByte(Edit6.Text));
 				}
 			}
@@ -633,17 +613,17 @@ namespace visual_sap_control
 		}
 
 		private int BackgroundProcessLogicMethod(BackgroundWorker bw, int a)
-		{
-			int result = 0;
-			
-			return result;
+		{		
+			return 0;
 		}
+		
 		void BackgroundWorker1RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
 		{
 			
 			this.timer1.Start();
 			backgroundWorker1.RunWorkerAsync(100);
 		}
+		
 		void Timer1Tick(object sender, EventArgs e)
 		{
 			SetForegroundWindow(Handle.ToInt32());
@@ -820,10 +800,14 @@ namespace visual_sap_control
          GlobalVar.painted =true;
 	
 		}
+		
+		
 		void Button7Click(object sender, EventArgs e)
 		{
 			CycloneInit("USB",1);
 		}
+		
+		
 		void Button3Click(object sender, EventArgs e)
 		{ 
 			this.WindowState = FormWindowState.Minimized;
