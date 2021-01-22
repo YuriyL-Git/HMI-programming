@@ -118,7 +118,17 @@ namespace visual_sap_control
 			{
 				
 				MessageBox.Show(cyclone_control_api.getImageDescription(GlobalVar.handle,1));
-			//	cyclone_control_api.startImageExecution(handle, 1);
+			
+			}
+		}
+		
+		public static void CycloneErasaAllImages ()
+		{
+			uint images = cyclone_control_api.countCycloneImages(GlobalVar.handle);
+			
+			for (uint i = 1; i < images+1; i++)
+			{
+				cyclone_control_api.eraseCycloneImage(GlobalVar.handle,i);
 			}
 		}
 		
@@ -792,8 +802,17 @@ namespace visual_sap_control
 			CycloneInit(TextBoxTest.Text);
 		}
 		void Button3Click(object sender, EventArgs e)
-		{
-			cyclone_control_api.startImageExecution(GlobalVar.handle, 1);
+		{ 
+			this.WindowState = FormWindowState.Minimized;
+			
+			uint images = cyclone_control_api.countCycloneImages(GlobalVar.handle);
+			
+			for (uint i = 1; i < images+1; i++)
+			{
+				cyclone_control_api.eraseCycloneImage(GlobalVar.handle,i);
+			}
+			
+			//cyclone_control_api.startImageExecution(GlobalVar.handle, 1);
 	
 		}
 		
