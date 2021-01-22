@@ -636,7 +636,6 @@ namespace visual_sap_control
 		void BackgroundWorker2DoWork(object sender, DoWorkEventArgs e)
 		{
 			ExecuteProgram();
-			
 		}
 		
 	
@@ -700,7 +699,6 @@ namespace visual_sap_control
 		void BackgroundWaitingProgressChanged(object sender, ProgressChangedEventArgs e)
 		{
 			waitingBar.Value = e.ProgressPercentage;
-			
 		}
 
 		void BackgroundSetSerialDoWork(object sender, DoWorkEventArgs e)
@@ -758,8 +756,7 @@ namespace visual_sap_control
 		}
 		void BackgroundWriteInitProgressChanged(object sender, ProgressChangedEventArgs e)
 		{
-			nfcInitBar.Value = e.ProgressPercentage;
-			
+			nfcInitBar.Value = e.ProgressPercentage;	
 		}
 
 	

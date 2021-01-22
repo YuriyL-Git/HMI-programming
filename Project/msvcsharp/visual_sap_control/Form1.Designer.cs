@@ -30,8 +30,6 @@ namespace visual_sap_control
         {
         	this.components = new System.ComponentModel.Container();
         	System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-        	this.combo1 = new System.Windows.Forms.ComboBox();
-        	this.Edit1 = new System.Windows.Forms.TextBox();
         	this.label2 = new System.Windows.Forms.Label();
         	this.label7 = new System.Windows.Forms.Label();
         	this.Edit6 = new System.Windows.Forms.TextBox();
@@ -82,29 +80,6 @@ namespace visual_sap_control
         	((System.ComponentModel.ISupportInitialize)(this.NokSet)).BeginInit();
         	((System.ComponentModel.ISupportInitialize)(this.NokNfc)).BeginInit();
         	this.SuspendLayout();
-        	// 
-        	// combo1
-        	// 
-        	this.combo1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-        	this.combo1.FormattingEnabled = true;
-        	this.combo1.Items.AddRange(new object[] {
-			"USB",
-			"Ethernet",
-			"Serial"});
-        	this.combo1.Location = new System.Drawing.Point(12, 12);
-        	this.combo1.Name = "combo1";
-        	this.combo1.Size = new System.Drawing.Size(32, 21);
-        	this.combo1.TabIndex = 0;
-        	this.combo1.Visible = false;
-        	// 
-        	// Edit1
-        	// 
-        	this.Edit1.Location = new System.Drawing.Point(151, 180);
-        	this.Edit1.Name = "Edit1";
-        	this.Edit1.Size = new System.Drawing.Size(165, 22);
-        	this.Edit1.TabIndex = 6;
-        	this.Edit1.Text = "COM2";
-        	this.Edit1.Visible = false;
         	// 
         	// label2
         	// 
@@ -545,8 +520,6 @@ namespace visual_sap_control
         	this.Controls.Add(this.Edit6);
         	this.Controls.Add(this.label7);
         	this.Controls.Add(this.label2);
-        	this.Controls.Add(this.Edit1);
-        	this.Controls.Add(this.combo1);
         	this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         	this.ForeColor = System.Drawing.Color.Olive;
         	this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -576,12 +549,10 @@ namespace visual_sap_control
 
         #endregion
 
-        private System.Windows.Forms.ComboBox combo1;
         private System.Windows.Forms.ComboBox combo2;
         private System.Windows.Forms.ComboBox combo3;
         private System.Windows.Forms.ComboBox combo4;
         private System.Windows.Forms.ComboBox combo5;
-        private System.Windows.Forms.TextBox Edit1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox3;
