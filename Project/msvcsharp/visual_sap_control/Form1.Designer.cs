@@ -30,7 +30,6 @@ namespace visual_sap_control
         {
         	this.components = new System.ComponentModel.Container();
         	System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-        	this.Edit6 = new System.Windows.Forms.TextBox();
         	this.button2 = new System.Windows.Forms.Button();
         	this.textBox1 = new System.Windows.Forms.TextBox();
         	this.ProgrammingPassCheckBox = new System.Windows.Forms.CheckBox();
@@ -78,15 +77,6 @@ namespace visual_sap_control
         	((System.ComponentModel.ISupportInitialize)(this.NokNfc)).BeginInit();
         	this.SuspendLayout();
         	// 
-        	// Edit6
-        	// 
-        	this.Edit6.Location = new System.Drawing.Point(815, 52);
-        	this.Edit6.Name = "Edit6";
-        	this.Edit6.Size = new System.Drawing.Size(36, 22);
-        	this.Edit6.TabIndex = 26;
-        	this.Edit6.Text = "1";
-        	this.Edit6.Visible = false;
-        	// 
         	// button2
         	// 
         	this.button2.BackColor = System.Drawing.Color.Honeydew;
@@ -104,7 +94,7 @@ namespace visual_sap_control
         	this.textBox1.BackColor = System.Drawing.SystemColors.Window;
         	this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
         	this.textBox1.ForeColor = System.Drawing.SystemColors.GrayText;
-        	this.textBox1.Location = new System.Drawing.Point(153, 120);
+        	this.textBox1.Location = new System.Drawing.Point(302, 65);
         	this.textBox1.Name = "textBox1";
         	this.textBox1.Size = new System.Drawing.Size(276, 29);
         	this.textBox1.TabIndex = 0;
@@ -112,7 +102,7 @@ namespace visual_sap_control
         	// 
         	// ProgrammingPassCheckBox
         	// 
-        	this.ProgrammingPassCheckBox.Location = new System.Drawing.Point(566, 90);
+        	this.ProgrammingPassCheckBox.Location = new System.Drawing.Point(678, 65);
         	this.ProgrammingPassCheckBox.Name = "ProgrammingPassCheckBox";
         	this.ProgrammingPassCheckBox.Size = new System.Drawing.Size(145, 24);
         	this.ProgrammingPassCheckBox.TabIndex = 43;
@@ -132,7 +122,7 @@ namespace visual_sap_control
         	// 
         	// SetSerialCheckBox
         	// 
-        	this.SetSerialCheckBox.Location = new System.Drawing.Point(572, 150);
+        	this.SetSerialCheckBox.Location = new System.Drawing.Point(678, 125);
         	this.SetSerialCheckBox.Name = "SetSerialCheckBox";
         	this.SetSerialCheckBox.Size = new System.Drawing.Size(173, 24);
         	this.SetSerialCheckBox.TabIndex = 44;
@@ -142,7 +132,7 @@ namespace visual_sap_control
         	// 
         	// WriteNFCcheckBox
         	// 
-        	this.WriteNFCcheckBox.Location = new System.Drawing.Point(572, 180);
+        	this.WriteNFCcheckBox.Location = new System.Drawing.Point(678, 155);
         	this.WriteNFCcheckBox.Name = "WriteNFCcheckBox";
         	this.WriteNFCcheckBox.Size = new System.Drawing.Size(157, 24);
         	this.WriteNFCcheckBox.TabIndex = 45;
@@ -191,7 +181,7 @@ namespace visual_sap_control
         	// 
         	// ExecutingBox
         	// 
-        	this.ExecutingBox.Location = new System.Drawing.Point(572, 120);
+        	this.ExecutingBox.Location = new System.Drawing.Point(678, 95);
         	this.ExecutingBox.Name = "ExecutingBox";
         	this.ExecutingBox.Size = new System.Drawing.Size(139, 24);
         	this.ExecutingBox.TabIndex = 49;
@@ -276,7 +266,7 @@ namespace visual_sap_control
         	this.TopicLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
         	this.TopicLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         	this.TopicLabel.ForeColor = System.Drawing.Color.ForestGreen;
-        	this.TopicLabel.Location = new System.Drawing.Point(103, 65);
+        	this.TopicLabel.Location = new System.Drawing.Point(227, 6);
         	this.TopicLabel.Name = "TopicLabel";
         	this.TopicLabel.Size = new System.Drawing.Size(422, 32);
         	this.TopicLabel.TabIndex = 54;
@@ -484,7 +474,6 @@ namespace visual_sap_control
         	this.Controls.Add(this.ProgrammingPassCheckBox);
         	this.Controls.Add(this.textBox1);
         	this.Controls.Add(this.button2);
-        	this.Controls.Add(this.Edit6);
         	this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         	this.ForeColor = System.Drawing.Color.Olive;
         	this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -522,7 +511,6 @@ namespace visual_sap_control
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox Edit6;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox textBox1;
