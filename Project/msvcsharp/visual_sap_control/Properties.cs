@@ -16,14 +16,14 @@ namespace msvcsharp
 	/// </summary>
 	/// 
 	
-	public class Properties
+	public class Property
 	{
-		public Properties()
+		public Property()
 		{
 		}
 		
 		private string _connectionType;
-		[CategoryAttribute("ID Settings"), DescriptionAttribute("Name of the customer")]  
+		[CategoryAttribute("ConnectionType"), DescriptionAttribute("COM or USB")]  
         public string ConnectionType {  
         get
         {

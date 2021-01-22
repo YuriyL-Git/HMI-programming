@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using visual_sap_control.Properties;
 
 namespace visual_sap_control
 {

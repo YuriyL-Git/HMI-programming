@@ -14,9 +14,11 @@ using System.Runtime.InteropServices;
 using WindowScrape;
 using WindowScrape.Static;
 using System.Drawing;
+using visual_sap_control.Properties;
 
 namespace visual_sap_control
 {
+	
 	public partial class Form1 : Form
 	{
 		[STAThread]
@@ -705,7 +707,10 @@ namespace visual_sap_control
 		void Button7Click(object sender, EventArgs e)
 		{
 			
-			CycloneInit(TextBoxTest.Text,1);
+			//CycloneInit(TextBoxTest.Text,1);
+			Property properties = new Property();
+		
+			
 		}
 		
 		
@@ -736,4 +741,24 @@ namespace visual_sap_control
 		
 		
 	}
+	
+	
+	
+	public class Property
+	{
+		public Property()
+		{
+		}
+		
+		private string _connectionType;
+		[CategoryAttribute("ConnectionType"), DescriptionAttribute("COM or USB")]  
+        public string ConnectionType
+        { 
+        	get { return _connectionType; }
+            set { _connectionType = value; }  
+        }
+        
+    }
+	
+	
 }
