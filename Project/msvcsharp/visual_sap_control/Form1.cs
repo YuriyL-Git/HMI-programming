@@ -59,9 +59,8 @@ namespace visual_sap_control
 		public Form1()
 		{
 			InitializeComponent();
-			combo1.SelectedIndex = 1;
-			label12.Text = "";
-			cyclone_control_api.enumerateAllPorts();
+			
+			
 			
 			
 		}
@@ -109,6 +108,7 @@ namespace visual_sap_control
 		/// <param name="portname"></param>
 		public static void CycloneInit (String connectionType, int portNumber )
 		{
+			cyclone_control_api.enumerateAllPorts();
 			string portname ="";
 			if (connectionType.ToUpper().Equals("USB"))
 			{
