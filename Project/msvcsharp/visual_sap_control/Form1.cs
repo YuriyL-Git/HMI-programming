@@ -469,22 +469,7 @@ namespace visual_sap_control
 
 		private void checkBox1_CheckedChanged(object sender, EventArgs e)
 		{
-			UInt32 image_count = 0;
-			UInt32 connection_type = cyclone_control_api.CyclonePortType_USB;
-			UInt32 handle = 0;
-			
-			label12.Text = "Contacting IP1 ...";
-			Application.DoEvents();
-			connection_type = convert_dropboxindex_to_connectiontype(combo1.SelectedIndex);
-			handle = cyclone_control_api.connectToCyclone(Edit1.Text);
 
-			if (handle == 0)
-				label12.Text = "Error Opening Device";
-			else {
-				image_count = cyclone_control_api.countCycloneImages(handle);
-				label12.Text = "Total Images = " + image_count.ToString();
-			}
-			
 		}
 
 
