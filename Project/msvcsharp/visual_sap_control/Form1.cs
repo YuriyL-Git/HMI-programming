@@ -106,7 +106,7 @@ namespace visual_sap_control
 		/// </summary>
 		/// <param name="connectionType"></param>
 		/// <param name="portname"></param>
-		public static void CycloneInit (String connectionType, int portNumber )
+		public void CycloneInit (String connectionType, int portNumber )
 		{
 			cyclone_control_api.enumerateAllPorts();
 			string portname ="";
@@ -114,24 +114,20 @@ namespace visual_sap_control
 			{
 				GlobalVar.connection_type = cyclone_control_api.CyclonePortType_USB;
 				portname = "USB"+portNumber.ToString();
-				MessageBox.Show("USB");
 			}
 			if (connectionType.ToUpper().Equals("COM"))
 			{
 				GlobalVar.connection_type = cyclone_control_api.CyclonePortType_Serial;
 				portname = "COM"+portNumber.ToString();
-				MessageBox.Show("COM");
 			}
 			
 			
 			GlobalVar.handle = cyclone_control_api.connectToCyclone(portname);
 			if (GlobalVar.handle == 0) {
+				this.WindowState = FormWindowState.Minimized;
 				MessageBox.Show("Error Opening Device");
 
-			} else 
-			{
-				MessageBox.Show(cyclone_control_api.getImageDescription(GlobalVar.handle,1));
-			}
+			} 
 		}
 		
 		public static void CycloneEraseAllImages ()
@@ -153,6 +149,7 @@ namespace visual_sap_control
 		
 		public void CycloneExecuteProgramming()
 		{
+			CycloneInit(TextBoxTest.Text,1);
 			cyclone_control_api.startImageExecution(GlobalVar.handle, 1);
 			Application.DoEvents();
 			bool cyclone1done = false;
@@ -228,7 +225,8 @@ namespace visual_sap_control
 				
 				
 				backgroundProgramming.RunWorkerAsync();
-				button2.PerformClick(); // execute programming board procedure
+			//	MessageBox.Show("Work started");
+				CycloneExecuteProgramming(); // execute programming board procedure
 				
 				DateTime now = new DateTime();
 				now = DateTime.Now;
@@ -236,7 +234,7 @@ namespace visual_sap_control
 				int secCurrent = secNow;
 				
 				while (!GlobalVar.ProgrammingPassCheckBox && secCurrent - secNow < 10) {
-					button2.PerformClick();
+					CycloneExecuteProgramming();
 					now = DateTime.Now;
 					secCurrent = now.Hour * 3600 + now.Minute * 60 + now.Second;
 				}
@@ -546,7 +544,7 @@ namespace visual_sap_control
 		{
 			GlobalVar.FormActiveFocusFlag = false;
 			this.Size = new Size(900, 750);
-			//this.timer1.Start();
+			this.timer1.Start();
 			ReallyCenterToScreen();
 			
 			this.TopMost = true;
@@ -605,7 +603,6 @@ namespace visual_sap_control
 			if (e.KeyChar == (char)Keys.Enter) {
 				e.Handled = true;
 				backgroundWorker2.RunWorkerAsync(100);
-				
 			}
 			
 		}
@@ -615,9 +612,15 @@ namespace visual_sap_control
 			return 0;
 		}
 		
+		void BackgroundWorker1DoWork(object sender, DoWorkEventArgs e)
+																	  
+		{
+//			this.BringToFront();
+//			this.Activate();
+		}
+		
 		void BackgroundWorker1RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
 		{
-			
 			this.timer1.Start();
 			backgroundWorker1.RunWorkerAsync(100);
 		}
@@ -629,7 +632,6 @@ namespace visual_sap_control
 			this.BringToFront();
 			
 			this.ActiveControl = textBox1;
-			
 			this.timer1.Start();
 			
 		}
@@ -650,7 +652,8 @@ namespace visual_sap_control
 			ExecuteProgram();
 			
 		}
-
+		
+	
 		void Form1Activated(object sender, EventArgs e)
 		{
 			GlobalVar.FormActiveFocusFlag = false;
@@ -713,6 +716,7 @@ namespace visual_sap_control
 			waitingBar.Value = e.ProgressPercentage;
 			
 		}
+
 		void BackgroundSetSerialDoWork(object sender, DoWorkEventArgs e)
 		{
 			if ((backgroundSetSerial.CancellationPending == true)) {
@@ -720,9 +724,9 @@ namespace visual_sap_control
 			} else if (!backgroundSetSerial.CancellationPending) {
 				for (int i = 0; i < 51; i++) {
 					
-					if (i == 30) {
+					if (i == 30)
+					{
 						i = i + 8;
-							
 					}
 				
 					if (!GlobalVar.boardPassed) 
@@ -731,7 +735,6 @@ namespace visual_sap_control
 						NokSet.Visible = true;
 						break;
 					}
-					
 					
 					this.BringToFront();
 					Thread.Sleep(GlobalVar.setSerialTime / 51);
@@ -777,26 +780,18 @@ namespace visual_sap_control
 		void Form1Paint(object sender, PaintEventArgs e)
 		{
 			Graphics gs = this.CreateGraphics();
-
             Brush br1 = new SolidBrush(Color.SteelBlue );
-
             Brush br2 = new SolidBrush(Color.CadetBlue);
-
             Pen p1 = new Pen(br1);
-
             p1.Width =3;
 
              e.Graphics.Clear(Color.LightCyan);
         
-         gs.DrawLine(p1, new Point(0, 0), new Point(0, this.Height));
-           
-         gs.DrawLine(p1, new Point(0, 0), new Point(this.Width,0 ));
-           
-         gs.DrawLine(p1, new Point(this.Width-1, 0), new Point(this.Width-1,this.Height ));
-           
-         gs.DrawLine(p1, new Point(0, this.Height-1), new Point(this.Width,this.Height-1 ));
-         GlobalVar.painted =true;
-	
+           gs.DrawLine(p1, new Point(0, 0), new Point(0, this.Height));
+           gs.DrawLine(p1, new Point(0, 0), new Point(this.Width,0 ));
+           gs.DrawLine(p1, new Point(this.Width-1, 0), new Point(this.Width-1,this.Height ));
+           gs.DrawLine(p1, new Point(0, this.Height-1), new Point(this.Width,this.Height-1 ));
+           GlobalVar.painted =true;
 		}
 		
 		
