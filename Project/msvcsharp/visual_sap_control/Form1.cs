@@ -59,11 +59,8 @@ namespace visual_sap_control
 		public Form1()
 		{
 			InitializeComponent();
-			
-			
-			
-			
 		}
+		
 		protected void ReallyCenterToScreen()
 		{
 			Screen screen = Screen.FromControl(this);

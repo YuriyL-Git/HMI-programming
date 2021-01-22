@@ -57,6 +57,7 @@
     <None Include="visual_sap_control\Properties\Settings.settings" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties.cs" />
     <Compile Include="visual_sap_control\Form1.cs">
       <SubType>Form</SubType>
     </Compile>

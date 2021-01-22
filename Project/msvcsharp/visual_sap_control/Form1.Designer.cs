@@ -66,7 +66,7 @@ namespace visual_sap_control
         	this.SerNumLabel = new System.Windows.Forms.Label();
         	this.button7 = new System.Windows.Forms.Button();
         	this.TextBoxTest = new System.Windows.Forms.TextBox();
-        	this.propertyGrid1 = new System.Windows.Forms.PropertyGrid();
+        	this.propertyGrid = new System.Windows.Forms.PropertyGrid();
         	this.button3 = new System.Windows.Forms.Button();
         	((System.ComponentModel.ISupportInitialize)(this.OkWait)).BeginInit();
         	((System.ComponentModel.ISupportInitialize)(this.OkProg)).BeginInit();
@@ -419,12 +419,12 @@ namespace visual_sap_control
         	this.TextBoxTest.TabIndex = 69;
         	this.TextBoxTest.Text = "USB";
         	// 
-        	// propertyGrid1
+        	// propertyGrid
         	// 
-        	this.propertyGrid1.Location = new System.Drawing.Point(3, 120);
-        	this.propertyGrid1.Name = "propertyGrid1";
-        	this.propertyGrid1.Size = new System.Drawing.Size(130, 130);
-        	this.propertyGrid1.TabIndex = 70;
+        	this.propertyGrid.Location = new System.Drawing.Point(29, 44);
+        	this.propertyGrid.Name = "propertyGrid";
+        	this.propertyGrid.Size = new System.Drawing.Size(201, 172);
+        	this.propertyGrid.TabIndex = 70;
         	// 
         	// button3
         	// 
@@ -445,7 +445,7 @@ namespace visual_sap_control
         	this.ClientSize = new System.Drawing.Size(963, 650);
         	this.ControlBox = false;
         	this.Controls.Add(this.button3);
-        	this.Controls.Add(this.propertyGrid1);
+        	this.Controls.Add(this.propertyGrid);
         	this.Controls.Add(this.TextBoxTest);
         	this.Controls.Add(this.button7);
         	this.Controls.Add(this.SerNumLabel);
@@ -548,7 +548,7 @@ namespace visual_sap_control
         private System.Windows.Forms.Label SerNumLabel;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TextBox TextBoxTest;
-        private System.Windows.Forms.PropertyGrid propertyGrid1;
+        private System.Windows.Forms.PropertyGrid propertyGrid;
         private System.Windows.Forms.Button button3;
     }
 }
