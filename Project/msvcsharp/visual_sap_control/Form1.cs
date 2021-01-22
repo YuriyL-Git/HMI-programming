@@ -462,7 +462,7 @@ namespace visual_sap_control
 		{
 			GlobalVar.FormActiveFocusFlag = false;
 			this.Size = new Size(900, 750);
-			this.timer1.Start();
+		//	this.timer1.Start();
 			ReallyCenterToScreen();
 			
 			this.TopMost = true;
@@ -709,6 +709,11 @@ namespace visual_sap_control
 			
 			//CycloneInit(TextBoxTest.Text,1);
 			Property properties = new Property();
+			
+			properties.ConnectionType.Add("COM");
+			properties.ConnectionType.Add("USB");
+			
+			propertyGrid.SelectedObject = properties;
 		
 			
 		}
@@ -750,9 +755,9 @@ namespace visual_sap_control
 		{
 		}
 		
-		private string _connectionType;
+		private List<string> _connectionType = new List<string>();
 		[CategoryAttribute("ConnectionType"), DescriptionAttribute("COM or USB")]  
-        public string ConnectionType
+        public List<string> ConnectionType
         { 
         	get { return _connectionType; }
             set { _connectionType = value; }  
