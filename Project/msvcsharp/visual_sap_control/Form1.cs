@@ -102,13 +102,29 @@ namespace visual_sap_control
 			}
 			
 		}
-		
-		public static void CycloneInit (String portname )
+		/// <summary>
+		/// connectionType = "USB" or connectionType ="COM"
+		/// </summary>
+		/// <param name="connectionType"></param>
+		/// <param name="portname"></param>
+		public static void CycloneInit (String connectionType, int portNumber )
 		{
-			GlobalVar.connection_type = cyclone_control_api.CyclonePortType_USB;
-			GlobalVar.handle = 0;
+			string portname ="";
+			if (connectionType.ToUpper().Equals("USB"))
+			{
+				GlobalVar.connection_type = cyclone_control_api.CyclonePortType_USB;
+				portname = "USB"+portNumber.ToString();
+				MessageBox.Show("USB");
+			}
+			if (connectionType.ToUpper().Equals("COM"))
+			{
+				GlobalVar.connection_type = cyclone_control_api.CyclonePortType_Serial;
+				portname = "COM"+portNumber.ToString();
+				MessageBox.Show("COM");
+			}
 			
-			Application.DoEvents();
+			
+			//Application.DoEvents();
 			
 			GlobalVar.handle = cyclone_control_api.connectToCyclone(portname);
 			if (GlobalVar.handle == 0) {
@@ -122,7 +138,7 @@ namespace visual_sap_control
 			}
 		}
 		
-		public static void CycloneErasaAllImages ()
+		public static void CycloneEraseAllImages ()
 		{
 			uint images = cyclone_control_api.countCycloneImages(GlobalVar.handle);
 			
@@ -130,6 +146,13 @@ namespace visual_sap_control
 			{
 				cyclone_control_api.eraseCycloneImage(GlobalVar.handle,i);
 			}
+		}
+		
+		public static void CycloneUpdateImage(string Path)
+		{
+			CycloneEraseAllImages();
+			cyclone_control_api.addCycloneImage(GlobalVar.handle,1,true, Path);
+		
 		}
 		
 		//Main procedure----------------------------------------------
@@ -799,21 +822,30 @@ namespace visual_sap_control
 		}
 		void Button7Click(object sender, EventArgs e)
 		{
-			CycloneInit(TextBoxTest.Text);
+			CycloneInit("USB",1);
 		}
 		void Button3Click(object sender, EventArgs e)
 		{ 
 			this.WindowState = FormWindowState.Minimized;
+			cyclone_control_api.startImageExecution(GlobalVar.handle, 1);
 			
-			uint images = cyclone_control_api.countCycloneImages(GlobalVar.handle);
+//			uint images = cyclone_control_api.countCycloneImages(GlobalVar.handle);
+//			
+//			for (uint i = 1; i < images+1; i++)
+//			{
+//				cyclone_control_api.eraseCycloneImage(GlobalVar.handle,i);
+//			}
 			
-			for (uint i = 1; i < images+1; i++)
-			{
-				cyclone_control_api.eraseCycloneImage(GlobalVar.handle,i);
-			}
+			//CycloneErasaAllImages();
 			
+			
+//			
 			//cyclone_control_api.startImageExecution(GlobalVar.handle, 1);
-	
+			//CycloneErasaAllImages();
+			//cyclone_control_api.addCycloneImage(GlobalVar.handle,1,true, @"C:\Temp\HMI_VEL_KE02_ATG_08_06_02_CRC_0xC1E5.sap");
+			
+			//CycloneUpdateImage(@"C:\Temp\HMI_VEL_KE02_ATG_08_03_03_CRC_0xC1E5.sap");
+		
 		}
 		
 		
