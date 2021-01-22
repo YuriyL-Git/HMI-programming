@@ -121,7 +121,6 @@ namespace visual_sap_control
         	this.button2.TabIndex = 32;
         	this.button2.Text = "Execute Programming\r\n";
         	this.button2.UseVisualStyleBackColor = false;
-        	this.button2.Click += new System.EventHandler(this.button2_Click);
         	// 
         	// label12
         	// 
@@ -199,7 +198,7 @@ namespace visual_sap_control
         	this.button5.FlatAppearance.BorderColor = System.Drawing.Color.PaleTurquoise;
         	this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         	this.button5.ForeColor = System.Drawing.Color.SeaGreen;
-        	this.button5.Location = new System.Drawing.Point(745, 33);
+        	this.button5.Location = new System.Drawing.Point(907, 10);
         	this.button5.Name = "button5";
         	this.button5.Size = new System.Drawing.Size(44, 23);
         	this.button5.TabIndex = 47;
@@ -213,7 +212,7 @@ namespace visual_sap_control
         	this.button6.FlatAppearance.BorderColor = System.Drawing.Color.PaleTurquoise;
         	this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
         	this.button6.ForeColor = System.Drawing.Color.Sienna;
-        	this.button6.Location = new System.Drawing.Point(685, 33);
+        	this.button6.Location = new System.Drawing.Point(857, 10);
         	this.button6.Name = "button6";
         	this.button6.Size = new System.Drawing.Size(44, 23);
         	this.button6.TabIndex = 48;
@@ -308,7 +307,7 @@ namespace visual_sap_control
         	this.TopicLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
         	this.TopicLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         	this.TopicLabel.ForeColor = System.Drawing.Color.ForestGreen;
-        	this.TopicLabel.Location = new System.Drawing.Point(139, 15);
+        	this.TopicLabel.Location = new System.Drawing.Point(103, 65);
         	this.TopicLabel.Name = "TopicLabel";
         	this.TopicLabel.Size = new System.Drawing.Size(422, 32);
         	this.TopicLabel.TabIndex = 54;
