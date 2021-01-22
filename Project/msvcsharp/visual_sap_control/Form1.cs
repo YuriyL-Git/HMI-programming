@@ -51,6 +51,9 @@ namespace visual_sap_control
 			
 			public static bool painted = false;
 			
+			public static UInt32 connection_type { get; set; }
+			public static UInt32 handle { get; set; }
+			
 		}
 		
 		public Form1()
@@ -102,21 +105,20 @@ namespace visual_sap_control
 		
 		public static void CycloneInit (String portname )
 		{
-			UInt32 connection_type = cyclone_control_api.CyclonePortType_USB;
-			UInt32 handle = 0;
-			//label12.Text = "Contacting IP1 ... ";
+			GlobalVar.connection_type = cyclone_control_api.CyclonePortType_USB;
+			GlobalVar.handle = 0;
+			
 			Application.DoEvents();
-			//connection_type = convert_dropboxindex_to_connectiontype(2);
-			handle = cyclone_control_api.connectToCyclone(portname);
-			if (handle == 0) {
+			
+			GlobalVar.handle = cyclone_control_api.connectToCyclone(portname);
+			if (GlobalVar.handle == 0) {
 				MessageBox.Show("Error Opening Device");
-				//label12.Text = "Error Opening Device";
+
 			} else 
 			{
-				//label12.Text = cyclone_control_api.getPropertyValue(handle, 0, cyclone_control_api.CycloneProperties, cyclone_control_api.selectCyclonePropertyName);
-				//MessageBox.Show(cyclone_control_api.getPropertyValue(handle, 0, cyclone_control_api.CycloneProperties, cyclone_control_api.selectCyclonePropertyName));
-				MessageBox.Show(cyclone_control_api.getImageDescription(handle,1));
-				cyclone_control_api.startImageExecution(handle, 1);
+				
+				MessageBox.Show(cyclone_control_api.getImageDescription(GlobalVar.handle,1));
+			//	cyclone_control_api.startImageExecution(handle, 1);
 			}
 		}
 		
@@ -473,8 +475,6 @@ namespace visual_sap_control
 				label12.Text = cyclone_control_api.getImageDescription(handle, Convert.ToUInt32(Edit6.Text));
 			}
 			
-
-
 		}
 
 		private void button2_Click(object sender, EventArgs e)
@@ -791,6 +791,12 @@ namespace visual_sap_control
 		{
 			CycloneInit(TextBoxTest.Text);
 		}
+		void Button3Click(object sender, EventArgs e)
+		{
+			cyclone_control_api.startImageExecution(GlobalVar.handle, 1);
+	
+		}
+		
 		
 	}
 }
