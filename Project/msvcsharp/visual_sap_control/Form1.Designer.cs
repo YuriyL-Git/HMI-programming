@@ -128,7 +128,7 @@ namespace visual_sap_control
         	// 
         	// Edit6
         	// 
-        	this.Edit6.Location = new System.Drawing.Point(504, 12);
+        	this.Edit6.Location = new System.Drawing.Point(815, 52);
         	this.Edit6.Name = "Edit6";
         	this.Edit6.Size = new System.Drawing.Size(36, 22);
         	this.Edit6.TabIndex = 26;
@@ -470,7 +470,7 @@ namespace visual_sap_control
         	// 
         	// button7
         	// 
-        	this.button7.Location = new System.Drawing.Point(691, 272);
+        	this.button7.Location = new System.Drawing.Point(705, 261);
         	this.button7.Name = "button7";
         	this.button7.Size = new System.Drawing.Size(130, 69);
         	this.button7.TabIndex = 68;
@@ -480,11 +480,11 @@ namespace visual_sap_control
         	// 
         	// TextBoxTest
         	// 
-        	this.TextBoxTest.Location = new System.Drawing.Point(685, 372);
+        	this.TextBoxTest.Location = new System.Drawing.Point(709, 353);
         	this.TextBoxTest.Name = "TextBoxTest";
         	this.TextBoxTest.Size = new System.Drawing.Size(126, 22);
         	this.TextBoxTest.TabIndex = 69;
-        	this.TextBoxTest.Text = "USB1";
+        	this.TextBoxTest.Text = "USB";
         	// 
         	// propertyGrid1
         	// 
@@ -495,7 +495,7 @@ namespace visual_sap_control
         	// 
         	// button3
         	// 
-        	this.button3.Location = new System.Drawing.Point(691, 227);
+        	this.button3.Location = new System.Drawing.Point(705, 216);
         	this.button3.Name = "button3";
         	this.button3.Size = new System.Drawing.Size(130, 23);
         	this.button3.TabIndex = 71;

@@ -124,17 +124,13 @@ namespace visual_sap_control
 			}
 			
 			
-			//Application.DoEvents();
-			
 			GlobalVar.handle = cyclone_control_api.connectToCyclone(portname);
 			if (GlobalVar.handle == 0) {
 				MessageBox.Show("Error Opening Device");
 
 			} else 
 			{
-				
 				MessageBox.Show(cyclone_control_api.getImageDescription(GlobalVar.handle,1));
-			
 			}
 		}
 		
@@ -154,6 +150,33 @@ namespace visual_sap_control
 			cyclone_control_api.addCycloneImage(GlobalVar.handle,1,true, Path);
 		
 		}
+		
+		public void CycloneExecuteProgramming()
+		{
+			cyclone_control_api.startImageExecution(GlobalVar.handle, 1);
+			Application.DoEvents();
+			bool cyclone1done = false;
+
+			do
+			{
+					if (cyclone_control_api.checkCycloneExecutionStatus(GlobalVar.handle) == 0) 
+					{
+						if (cyclone_control_api.getNumberOfErrors(GlobalVar.handle) == 0)
+						{
+							GlobalVar.ProgrammingPassCheckBox = true;
+							NokProg.Visible = false;
+							GlobalVar.ProgrammingError = false;
+						} else 
+					    {
+						  GlobalVar.ProgrammingError = true;
+						}
+						cyclone1done = true;
+					}
+			} 
+			while (!(cyclone1done));
+		}
+		
+		
 		
 		//Main procedure----------------------------------------------
 		public void ExecuteProgram()
@@ -213,9 +236,6 @@ namespace visual_sap_control
 				int secCurrent = secNow;
 				
 				while (!GlobalVar.ProgrammingPassCheckBox && secCurrent - secNow < 10) {
-					// backgroundProgramming.CancelAsync();
-					//ProgrammingBar.Value = ProgrammingBar.Value-20;
-					//backgroundProgramming.RunWorkerAsync(50);
 					button2.PerformClick();
 					now = DateTime.Now;
 					secCurrent = now.Hour * 3600 + now.Minute * 60 + now.Second;
@@ -466,13 +486,6 @@ namespace visual_sap_control
 			}
 			return result;
 		}
-
-		private void checkBox1_CheckedChanged(object sender, EventArgs e)
-		{
-
-		}
-
-
 
 
 		private void button2_Click(object sender, EventArgs e)
@@ -789,14 +802,16 @@ namespace visual_sap_control
 		
 		void Button7Click(object sender, EventArgs e)
 		{
-			CycloneInit("USB",1);
+			
+			CycloneInit(TextBoxTest.Text,1);
 		}
 		
 		
 		void Button3Click(object sender, EventArgs e)
 		{ 
 			this.WindowState = FormWindowState.Minimized;
-			cyclone_control_api.startImageExecution(GlobalVar.handle, 1);
+			//cyclone_control_api.startImageExecution(GlobalVar.handle, 1);
+			CycloneExecuteProgramming();
 			
 //			uint images = cyclone_control_api.countCycloneImages(GlobalVar.handle);
 //			
