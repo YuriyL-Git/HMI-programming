@@ -30,11 +30,8 @@ namespace visual_sap_control
         {
         	this.components = new System.ComponentModel.Container();
         	System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-        	this.label2 = new System.Windows.Forms.Label();
-        	this.label7 = new System.Windows.Forms.Label();
         	this.Edit6 = new System.Windows.Forms.TextBox();
         	this.button2 = new System.Windows.Forms.Button();
-        	this.label12 = new System.Windows.Forms.Label();
         	this.textBox1 = new System.Windows.Forms.TextBox();
         	this.ProgrammingPassCheckBox = new System.Windows.Forms.CheckBox();
         	this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
@@ -81,26 +78,6 @@ namespace visual_sap_control
         	((System.ComponentModel.ISupportInitialize)(this.NokNfc)).BeginInit();
         	this.SuspendLayout();
         	// 
-        	// label2
-        	// 
-        	this.label2.AutoSize = true;
-        	this.label2.Location = new System.Drawing.Point(415, 52);
-        	this.label2.Name = "label2";
-        	this.label2.Size = new System.Drawing.Size(62, 13);
-        	this.label2.TabIndex = 11;
-        	this.label2.Text = "Cyclone1 : ";
-        	this.label2.Visible = false;
-        	// 
-        	// label7
-        	// 
-        	this.label7.AutoSize = true;
-        	this.label7.Location = new System.Drawing.Point(406, 15);
-        	this.label7.Name = "label7";
-        	this.label7.Size = new System.Drawing.Size(100, 13);
-        	this.label7.TabIndex = 21;
-        	this.label7.Text = "Image to Execute: ";
-        	this.label7.Visible = false;
-        	// 
         	// Edit6
         	// 
         	this.Edit6.Location = new System.Drawing.Point(815, 52);
@@ -121,14 +98,6 @@ namespace visual_sap_control
         	this.button2.TabIndex = 32;
         	this.button2.Text = "Execute Programming\r\n";
         	this.button2.UseVisualStyleBackColor = false;
-        	// 
-        	// label12
-        	// 
-        	this.label12.Location = new System.Drawing.Point(572, 15);
-        	this.label12.Name = "label12";
-        	this.label12.Size = new System.Drawing.Size(263, 15);
-        	this.label12.TabIndex = 33;
-        	this.label12.Text = "label12";
         	// 
         	// textBox1
         	// 
@@ -514,11 +483,8 @@ namespace visual_sap_control
         	this.Controls.Add(this.SetSerialCheckBox);
         	this.Controls.Add(this.ProgrammingPassCheckBox);
         	this.Controls.Add(this.textBox1);
-        	this.Controls.Add(this.label12);
         	this.Controls.Add(this.button2);
         	this.Controls.Add(this.Edit6);
-        	this.Controls.Add(this.label7);
-        	this.Controls.Add(this.label2);
         	this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
         	this.ForeColor = System.Drawing.Color.Olive;
         	this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -552,7 +518,6 @@ namespace visual_sap_control
         private System.Windows.Forms.ComboBox combo3;
         private System.Windows.Forms.ComboBox combo4;
         private System.Windows.Forms.ComboBox combo5;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox4;
