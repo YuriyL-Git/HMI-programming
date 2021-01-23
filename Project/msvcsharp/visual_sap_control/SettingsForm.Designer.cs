@@ -79,6 +79,7 @@ namespace msvcsharp.visual_sap_control
 			this.dataGridView.Name = "dataGridView";
 			this.dataGridView.Size = new System.Drawing.Size(1248, 150);
 			this.dataGridView.TabIndex = 0;
+			this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewCellClick);
 			// 
 			// addProductButton
 			// 
@@ -213,6 +214,7 @@ namespace msvcsharp.visual_sap_control
 			this.editProductButton.TabIndex = 4;
 			this.editProductButton.Text = "Edit product";
 			this.editProductButton.UseVisualStyleBackColor = true;
+			this.editProductButton.Click += new System.EventHandler(this.EditProductButtonClick);
 			// 
 			// deleteProcuctButton
 			// 

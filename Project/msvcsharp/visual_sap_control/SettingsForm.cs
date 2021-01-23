@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using visual_sap_control;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 
 namespace msvcsharp.visual_sap_control
 {
@@ -26,16 +27,11 @@ namespace msvcsharp.visual_sap_control
 		}
 		//public static BindingList<>
 		public static BindingList<ProductProperties> productsDataList = new BindingList<ProductProperties>();
-		public void AddProductToGrid(ProductProperties product)
-		{
-			dataGridView.Rows.Add(product.ProductName, product.BarcodeExample, product.BarcodeMask, product.FirmwareFile, product.NfcFile);
-		}
 		
 		public void UpdateGrid()
 		{
 			dataGridView.Font = fontLabel.Font;
 			dataGridView.Width = this.Width - 50;
-		
 			dataGridView.DataSource = productsDataList;
 			
 			dataGridView.Columns[0].HeaderText = "Product Name"; 
@@ -56,10 +52,30 @@ namespace msvcsharp.visual_sap_control
 			}
 		}
 		
+		public ProductProperties GetProduct()
+		{
+			ProductProperties product = new ProductProperties();
+			product.ProductName = productNameTextBox.Text;
+			product.BarcodeExample = barcodeExampleTextBox.Text;
+			product.BarcodeMask = barcodeMaskTextBox.Text;
+			product.FirmwareFile = firmwareFileTextBox.Text;
+			product.NfcFile = nfcFileTextBox.Text;
+			return product;
+		}
+		
+		public void ClearTextBoxes()
+		{
+			productNameTextBox.Text = "";
+			barcodeExampleTextBox.Text = "";
+			barcodeMaskTextBox.Text = "";
+			firmwareFileTextBox.Text = "";
+			nfcFileTextBox.Text = "";
+		}
 		public void SettingsFormLoad(object sender, EventArgs e)
 		{
 			UpdateGrid();
 		}
+		
 		void SettingsFormFormClosed(object sender, FormClosedEventArgs e)
 		{
 			MainForm form = new MainForm();
@@ -69,16 +85,11 @@ namespace msvcsharp.visual_sap_control
 		}
 		void AddProductButtonClick(object sender, EventArgs e)
 		{
-			ProductProperties product = new ProductProperties();
-			product.ProductName = productNameTextBox.Text;
-			product.BarcodeExample = barcodeExampleTextBox.Text;
-			product.BarcodeMask = barcodeMaskTextBox.Text;
-			product.FirmwareFile = firmwareFileTextBox.Text;
-			product.NfcFile = nfcFileTextBox.Text;
-			productsDataList.Add(product);
+			productsDataList.Add(GetProduct());
+			ClearTextBoxes();
 			UpdateGrid();
-			
 		}
+		
 		void SettingsFormSizeChanged(object sender, EventArgs e)
 		{
 			this.Height = 420;
@@ -86,8 +97,6 @@ namespace msvcsharp.visual_sap_control
 				this.Width = 900;
 			dataGridView.Width = this.Width - 50;
 			ResizeGrid();
-			
-			
 		}
 		
 		void OpentFirmwareButtonClick(object sender, EventArgs e)
@@ -97,6 +106,7 @@ namespace msvcsharp.visual_sap_control
 				firmwareFileTextBox.Text = openFileDialog.FileName;
 			}
 		}
+		
 		void OpenNfcButtonClick(object sender, EventArgs e)
 		{
 			openFileDialog.Filter = "All files(*.*)|*.*";
@@ -104,14 +114,33 @@ namespace msvcsharp.visual_sap_control
 				nfcFileTextBox.Text = openFileDialog.FileName;
 			}
 		}
+		
 		void DeleteProcuctButtonClick(object sender, EventArgs e)
 		{
 			if (MessageBox.Show("Are you sure to delete selected product?", "Deletion Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes) 
 			{
-				//MessageBox.Show(dataGridView.CurrentCell.RowIndex.ToString());
 				productsDataList.RemoveAt(dataGridView.CurrentCell.RowIndex);
+				ClearTextBoxes();
 				UpdateGrid();
 			}
+		}
+		void DataGridViewCellClick(object sender, DataGridViewCellEventArgs e)
+		{
+			ProductProperties product = productsDataList.ElementAt(dataGridView.CurrentCell.RowIndex);
+			productNameTextBox.Text = product.ProductName;
+			barcodeExampleTextBox.Text = product.BarcodeExample;
+			barcodeMaskTextBox.Text = product.BarcodeMask;
+			firmwareFileTextBox.Text = product.FirmwareFile;
+			nfcFileTextBox.Text = product.NfcFile;
+		}
+		void EditProductButtonClick(object sender, EventArgs e)
+		{
+			if (MessageBox.Show("Are you sure to delete selected product?", "Deletion Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes) 
+			{
+				
+			}
+			
+	
 		}
 	}
 }
