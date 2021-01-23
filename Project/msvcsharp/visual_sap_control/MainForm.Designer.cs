@@ -38,8 +38,8 @@ namespace visual_sap_control
         	this.SetSerialCheckBox = new System.Windows.Forms.CheckBox();
         	this.WriteNFCcheckBox = new System.Windows.Forms.CheckBox();
         	this.labelResult = new System.Windows.Forms.Label();
-        	this.button5 = new System.Windows.Forms.Button();
-        	this.button6 = new System.Windows.Forms.Button();
+        	this.buttonClose = new System.Windows.Forms.Button();
+        	this.buttonMinimize = new System.Windows.Forms.Button();
         	this.ExecutingBox = new System.Windows.Forms.CheckBox();
         	this.timer2 = new System.Windows.Forms.Timer(this.components);
         	this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
@@ -68,6 +68,7 @@ namespace visual_sap_control
         	this.TextBoxTest = new System.Windows.Forms.TextBox();
         	this.propertyGrid = new System.Windows.Forms.PropertyGrid();
         	this.button3 = new System.Windows.Forms.Button();
+        	this.buttonSettings = new System.Windows.Forms.Button();
         	((System.ComponentModel.ISupportInitialize)(this.OkWait)).BeginInit();
         	((System.ComponentModel.ISupportInitialize)(this.OkProg)).BeginInit();
         	((System.ComponentModel.ISupportInitialize)(this.OkSet)).BeginInit();
@@ -151,33 +152,33 @@ namespace visual_sap_control
         	this.labelResult.TabIndex = 46;
         	this.labelResult.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         	// 
-        	// button5
+        	// buttonClose
         	// 
-        	this.button5.BackColor = System.Drawing.SystemColors.HighlightText;
-        	this.button5.FlatAppearance.BorderColor = System.Drawing.Color.PaleTurquoise;
-        	this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        	this.button5.ForeColor = System.Drawing.Color.SeaGreen;
-        	this.button5.Location = new System.Drawing.Point(907, 10);
-        	this.button5.Name = "button5";
-        	this.button5.Size = new System.Drawing.Size(44, 23);
-        	this.button5.TabIndex = 47;
-        	this.button5.Text = "X";
-        	this.button5.UseVisualStyleBackColor = false;
-        	this.button5.Click += new System.EventHandler(this.Button5Click);
+        	this.buttonClose.BackColor = System.Drawing.SystemColors.HighlightText;
+        	this.buttonClose.FlatAppearance.BorderColor = System.Drawing.Color.PaleTurquoise;
+        	this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+        	this.buttonClose.ForeColor = System.Drawing.Color.SeaGreen;
+        	this.buttonClose.Location = new System.Drawing.Point(907, 10);
+        	this.buttonClose.Name = "buttonClose";
+        	this.buttonClose.Size = new System.Drawing.Size(44, 23);
+        	this.buttonClose.TabIndex = 47;
+        	this.buttonClose.Text = "X";
+        	this.buttonClose.UseVisualStyleBackColor = false;
+        	this.buttonClose.Click += new System.EventHandler(this.Button5Click);
         	// 
-        	// button6
+        	// buttonMinimize
         	// 
-        	this.button6.BackColor = System.Drawing.SystemColors.HighlightText;
-        	this.button6.FlatAppearance.BorderColor = System.Drawing.Color.PaleTurquoise;
-        	this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-        	this.button6.ForeColor = System.Drawing.Color.Sienna;
-        	this.button6.Location = new System.Drawing.Point(857, 10);
-        	this.button6.Name = "button6";
-        	this.button6.Size = new System.Drawing.Size(44, 23);
-        	this.button6.TabIndex = 48;
-        	this.button6.Text = "–";
-        	this.button6.UseVisualStyleBackColor = false;
-        	this.button6.Click += new System.EventHandler(this.Button6Click);
+        	this.buttonMinimize.BackColor = System.Drawing.SystemColors.HighlightText;
+        	this.buttonMinimize.FlatAppearance.BorderColor = System.Drawing.Color.PaleTurquoise;
+        	this.buttonMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+        	this.buttonMinimize.ForeColor = System.Drawing.Color.Sienna;
+        	this.buttonMinimize.Location = new System.Drawing.Point(857, 10);
+        	this.buttonMinimize.Name = "buttonMinimize";
+        	this.buttonMinimize.Size = new System.Drawing.Size(44, 23);
+        	this.buttonMinimize.TabIndex = 48;
+        	this.buttonMinimize.Text = "–";
+        	this.buttonMinimize.UseVisualStyleBackColor = false;
+        	this.buttonMinimize.Click += new System.EventHandler(this.Button6Click);
         	// 
         	// ExecutingBox
         	// 
@@ -436,6 +437,19 @@ namespace visual_sap_control
         	this.button3.UseVisualStyleBackColor = true;
         	this.button3.Click += new System.EventHandler(this.Button3Click);
         	// 
+        	// buttonSettings
+        	// 
+        	this.buttonSettings.BackColor = System.Drawing.SystemColors.HighlightText;
+        	this.buttonSettings.FlatAppearance.BorderColor = System.Drawing.Color.PaleTurquoise;
+        	this.buttonSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+        	this.buttonSettings.ForeColor = System.Drawing.Color.Sienna;
+        	this.buttonSettings.Location = new System.Drawing.Point(807, 10);
+        	this.buttonSettings.Name = "buttonSettings";
+        	this.buttonSettings.Size = new System.Drawing.Size(44, 23);
+        	this.buttonSettings.TabIndex = 72;
+        	this.buttonSettings.Text = "⚙";
+        	this.buttonSettings.UseVisualStyleBackColor = false;
+        	// 
         	// MainForm
         	// 
         	this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -444,6 +458,7 @@ namespace visual_sap_control
         	this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
         	this.ClientSize = new System.Drawing.Size(963, 650);
         	this.ControlBox = false;
+        	this.Controls.Add(this.buttonSettings);
         	this.Controls.Add(this.button3);
         	this.Controls.Add(this.propertyGrid);
         	this.Controls.Add(this.TextBoxTest);
@@ -466,8 +481,8 @@ namespace visual_sap_control
         	this.Controls.Add(this.waitingBar);
         	this.Controls.Add(this.ProgrammingBar);
         	this.Controls.Add(this.ExecutingBox);
-        	this.Controls.Add(this.button6);
-        	this.Controls.Add(this.button5);
+        	this.Controls.Add(this.buttonMinimize);
+        	this.Controls.Add(this.buttonClose);
         	this.Controls.Add(this.labelResult);
         	this.Controls.Add(this.WriteNFCcheckBox);
         	this.Controls.Add(this.SetSerialCheckBox);
@@ -520,8 +535,8 @@ namespace visual_sap_control
         private System.Windows.Forms.CheckBox SetSerialCheckBox;
         private System.Windows.Forms.CheckBox WriteNFCcheckBox;
         private System.Windows.Forms.Label labelResult;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button buttonClose;
+        private System.Windows.Forms.Button buttonMinimize;
         private System.Windows.Forms.CheckBox ExecutingBox;
         private System.Windows.Forms.Timer timer2;
         private System.ComponentModel.BackgroundWorker backgroundWorker2;
@@ -550,6 +565,7 @@ namespace visual_sap_control
         private System.Windows.Forms.TextBox TextBoxTest;
         private System.Windows.Forms.PropertyGrid propertyGrid;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonSettings;
     }
 }
 

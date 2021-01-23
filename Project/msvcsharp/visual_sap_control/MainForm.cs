@@ -466,10 +466,12 @@ namespace visual_sap_control
 			ReallyCenterToScreen();
 			
 			this.TopMost = true;
-			button5.Left = this.Width - 46;
-			button5.Top = 2;
-			button6.Top = 2;
-			button6.Left = this.Width - 46 - button6.Width;
+			buttonClose.Left = this.Width - 46;
+			buttonClose.Top = 2;
+			buttonMinimize.Top = 2;
+			buttonMinimize.Left = this.Width - 46 - buttonMinimize.Width;
+			buttonSettings.Top = 2;
+			buttonSettings.Left = this.Width - 46 - buttonMinimize.Width*2;
 			
 			TopicLabel.Left = (this.ClientSize.Width - TopicLabel.Width) / 2;
 			TopicLabel.Top = (this.ClientSize.Height) / 20;
