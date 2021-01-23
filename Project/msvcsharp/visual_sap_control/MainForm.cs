@@ -11,6 +11,7 @@ using System.IO;
 using System.Linq;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using msvcsharp.visual_sap_control;
 using WindowScrape;
 using WindowScrape.Static;
 using System.Drawing;
@@ -742,8 +743,7 @@ namespace visual_sap_control
 		
 		void ButtonSettingsClick(object sender, EventArgs e)
 		{
-			
-			
+			SettingsForm settingsForm = new SettingsForm();
 			
 		}
 		

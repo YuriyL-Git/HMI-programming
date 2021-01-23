@@ -64,6 +64,7 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="visual_sap_control\cyclone_control_api.cs" />
+    <Compile Include="visual_sap_control\ProductProperties.cs" />
     <Compile Include="visual_sap_control\Program.cs" />
     <Compile Include="visual_sap_control\Properties.cs" />
     <Compile Include="visual_sap_control\Properties\AssemblyInfo.cs" />
