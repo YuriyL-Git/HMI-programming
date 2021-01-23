@@ -66,7 +66,6 @@ namespace visual_sap_control
         	this.SerNumLabel = new System.Windows.Forms.Label();
         	this.button7 = new System.Windows.Forms.Button();
         	this.TextBoxTest = new System.Windows.Forms.TextBox();
-        	this.button3 = new System.Windows.Forms.Button();
         	this.buttonSettings = new System.Windows.Forms.Button();
         	((System.ComponentModel.ISupportInitialize)(this.OkWait)).BeginInit();
         	((System.ComponentModel.ISupportInitialize)(this.OkProg)).BeginInit();
@@ -96,7 +95,7 @@ namespace visual_sap_control
         	this.textBox1.ForeColor = System.Drawing.SystemColors.GrayText;
         	this.textBox1.Location = new System.Drawing.Point(302, 65);
         	this.textBox1.Name = "textBox1";
-        	this.textBox1.Size = new System.Drawing.Size(276, 29);
+        	this.textBox1.Size = new System.Drawing.Size(276, 34);
         	this.textBox1.TabIndex = 0;
         	this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox1KeyPress);
         	// 
@@ -409,25 +408,14 @@ namespace visual_sap_control
         	this.button7.TabIndex = 68;
         	this.button7.Text = "TestButton";
         	this.button7.UseVisualStyleBackColor = true;
-        	this.button7.Click += new System.EventHandler(this.Button7Click);
         	// 
         	// TextBoxTest
         	// 
         	this.TextBoxTest.Location = new System.Drawing.Point(709, 353);
         	this.TextBoxTest.Name = "TextBoxTest";
-        	this.TextBoxTest.Size = new System.Drawing.Size(126, 22);
+        	this.TextBoxTest.Size = new System.Drawing.Size(126, 26);
         	this.TextBoxTest.TabIndex = 69;
         	this.TextBoxTest.Text = "USB";
-        	// 
-        	// button3
-        	// 
-        	this.button3.Location = new System.Drawing.Point(705, 216);
-        	this.button3.Name = "button3";
-        	this.button3.Size = new System.Drawing.Size(130, 23);
-        	this.button3.TabIndex = 71;
-        	this.button3.Text = "Test";
-        	this.button3.UseVisualStyleBackColor = true;
-        	this.button3.Click += new System.EventHandler(this.Button3Click);
         	// 
         	// buttonSettings
         	// 
@@ -445,14 +433,13 @@ namespace visual_sap_control
         	// 
         	// MainForm
         	// 
-        	this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+        	this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
         	this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
         	this.BackColor = System.Drawing.Color.LightCyan;
         	this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
         	this.ClientSize = new System.Drawing.Size(963, 650);
         	this.ControlBox = false;
         	this.Controls.Add(this.buttonSettings);
-        	this.Controls.Add(this.button3);
         	this.Controls.Add(this.TextBoxTest);
         	this.Controls.Add(this.button7);
         	this.Controls.Add(this.SerNumLabel);
@@ -555,7 +542,6 @@ namespace visual_sap_control
         private System.Windows.Forms.Label SerNumLabel;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TextBox TextBoxTest;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button buttonSettings;
     }
 }

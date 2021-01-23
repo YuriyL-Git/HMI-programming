@@ -190,7 +190,6 @@ namespace visual_sap_control
 		{
 			//TODO Create procedure for updating Firmware and NFC file if needed
 			
-			
 		}
 		
 		
@@ -730,10 +729,6 @@ namespace visual_sap_control
 		}
 		
 		
-		void Button7Click(object sender, EventArgs e)
-		{
-			
-		}
 		
 		
 		void Button3Click(object sender, EventArgs e)
