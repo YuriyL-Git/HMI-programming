@@ -56,6 +56,7 @@ namespace visual_sap_control
 			
 			public static UInt32 connection_type { get; set; }
 			public static UInt32 handle { get; set; }
+			public static string connectionType { get; set; }
 			
 		}
 		public static List<ProductProperties> productsDataList = new List<ProductProperties>();
@@ -103,9 +104,9 @@ namespace visual_sap_control
 			
 		}
 
-		public void CycloneInit ()
+		public void CycloneInit (String connectionType)
 		{
-			String connectionType = File.ReadAllText(System.IO.Path.GetDirectoryName(Application.ExecutablePath));
+			
 			cyclone_control_api.enumerateAllPorts();
 			int portNumber = 1;
 			string portname ="";
@@ -164,7 +165,7 @@ namespace visual_sap_control
 		
 		public void CycloneExecuteProgramming()
 		{
-			CycloneInit();
+			CycloneInit(GlobalVar.connectionType);
 			cyclone_control_api.startImageExecution(GlobalVar.handle, 1);
 			Application.DoEvents();
 			bool cyclone1done = false;
@@ -193,7 +194,6 @@ namespace visual_sap_control
 			//TODO Create procedure for updating Firmware and NFC file if needed
 			
 		}
-		
 		
 		
 		//Main procedure----------------------------------------------
@@ -484,6 +484,7 @@ namespace visual_sap_control
 		void MainFormLoad(object sender, EventArgs e)
 		{
 			LoadProperties();
+			GlobalVar.connectionType = File.ReadAllText(System.IO.Path.GetDirectoryName(Application.ExecutablePath)+@"\conectiontype.ini");
 			GlobalVar.FormActiveFocusFlag = false;
 			this.Size = new Size(900, 750);
 		//	this.timer1.Start();
@@ -767,7 +768,7 @@ namespace visual_sap_control
 		}
 		void Button7Click(object sender, EventArgs e)
 		{
-			CycloneInit();
+			CycloneInit(GlobalVar.connectionType);
 	
 		}
 		
