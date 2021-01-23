@@ -117,31 +117,31 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>170, 17</value>
-  </metadata>
-  <metadata name="timer2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>253, 17</value>
-  </metadata>
-  <metadata name="backgroundWorker2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>336, 17</value>
-  </metadata>
-  <metadata name="backgroundProgramming.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 54</value>
-  </metadata>
-  <metadata name="backgroundWaiting.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>170, 54</value>
-  </metadata>
-  <metadata name="backgroundSetSerial.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>323, 54</value>
-  </metadata>
-  <metadata name="backgroundWriteInit.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>476, 54</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>17, 17</value>
+  </data>
+  <data name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>170, 17</value>
+  </data>
+  <data name="timer2.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>253, 17</value>
+  </data>
+  <data name="backgroundWorker2.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>336, 17</value>
+  </data>
+  <data name="backgroundProgramming.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>17, 54</value>
+  </data>
+  <data name="backgroundWaiting.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>170, 54</value>
+  </data>
+  <data name="backgroundSetSerial.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>323, 54</value>
+  </data>
+  <data name="backgroundWriteInit.TrayLocation" type="System.Drawing.Point, System.Drawing">
+    <value>476, 54</value>
+  </data>
   <data name="OkWait.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAIBAQIBAQICAgICAgICAwUDAwMDAwYEBAMFBwYHBwcGBwcI
@@ -1412,9 +1412,10 @@
         v7StKt9IsIbW1hjt7e2QRQxRKESJFGFVQOAAAAAPSiiiv2C1tEfw3Jtu7P/Z
 </value>
   </data>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.TrayHeight" type="System.Int32, mscorlib">
     <value>81</value>
-  </metadata>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABABcAMDACAAEAAQAwAwAAdgEAACAgAgABAAEAMAEAAKYEAAAQEAIAAQABALAAAADWBQAAAAAQAAEA

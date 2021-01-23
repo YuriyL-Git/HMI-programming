@@ -104,8 +104,22 @@ namespace msvcsharp.visual_sap_control
 		}
 		void SettingsFormSizeChanged(object sender, EventArgs e)
 		{
+			this.Height = 420;
+			if (this.Width<900)  this.Width = 900;
 			dataGridView.Width = this.Width - 50;
 			ResizeGrid();
+			
+	
+		}
+		//[STAThread]
+		void OpentFirmwareButtonClick(object sender, EventArgs e)
+		{
+			//openFileDialog.Filter = "All files(*.*)|*.*";
+			
+		//	OpenFileDialog fileDialog = new OpenFileDialog();
+			if (openFileDialog.ShowDialog() == DialogResult.OK) {
+				firmwareFileTextBox.Text = openFileDialog.FileName;
+			}
 	
 		}
 	}

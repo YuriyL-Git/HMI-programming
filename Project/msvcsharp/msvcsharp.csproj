@@ -7,8 +7,9 @@
     <OutputType>WinExe</OutputType>
     <NoStandardLibraries>false</NoStandardLibraries>
     <AssemblyName>HMI-VEL programming</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <ApplicationIcon>Debug\Hopstarter-Sleek-Xp-Basic-Download.ico</ApplicationIcon>
     <NoWin32Manifest>False</NoWin32Manifest>
@@ -50,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="visual_sap_control\app.config" />
     <None Include="visual_sap_control\msvcsharp.csproj" />
     <None Include="visual_sap_control\msvcsharp.csproj.user" />

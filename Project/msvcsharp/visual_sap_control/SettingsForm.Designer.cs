@@ -25,6 +25,7 @@ namespace msvcsharp.visual_sap_control
 		private System.Windows.Forms.Button editProductButton;
 		private System.Windows.Forms.Button deleteProcuctButton;
 		private System.Windows.Forms.Label fontLabel;
+		private System.Windows.Forms.OpenFileDialog openFileDialog;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -65,6 +66,7 @@ namespace msvcsharp.visual_sap_control
 			this.editProductButton = new System.Windows.Forms.Button();
 			this.deleteProcuctButton = new System.Windows.Forms.Button();
 			this.fontLabel = new System.Windows.Forms.Label();
+			this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
 			this.groupBox1.SuspendLayout();
 			this.SuspendLayout();
@@ -124,6 +126,7 @@ namespace msvcsharp.visual_sap_control
 			this.opentFirmwareButton.TabIndex = 14;
 			this.opentFirmwareButton.Text = "Open Firmware";
 			this.opentFirmwareButton.UseVisualStyleBackColor = true;
+			this.opentFirmwareButton.Click += new System.EventHandler(this.OpentFirmwareButtonClick);
 			// 
 			// openNfcButton
 			// 
@@ -227,11 +230,16 @@ namespace msvcsharp.visual_sap_control
 			this.fontLabel.Size = new System.Drawing.Size(100, 23);
 			this.fontLabel.TabIndex = 6;
 			// 
+			// openFileDialog
+			// 
+			this.openFileDialog.FileName = "openFileDialog";
+			this.openFileDialog.ShowHelp = true;
+			// 
 			// SettingsForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(1277, 480);
+			this.ClientSize = new System.Drawing.Size(1277, 473);
 			this.Controls.Add(this.fontLabel);
 			this.Controls.Add(this.deleteProcuctButton);
 			this.Controls.Add(this.editProductButton);
