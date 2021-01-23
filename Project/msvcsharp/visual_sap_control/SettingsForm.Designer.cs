@@ -71,8 +71,8 @@ namespace msvcsharp.visual_sap_control
 			this.fontLabel = new System.Windows.Forms.Label();
 			this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
-			this.comRadioButton = new System.Windows.Forms.RadioButton();
 			this.usbRadioButton = new System.Windows.Forms.RadioButton();
+			this.comRadioButton = new System.Windows.Forms.RadioButton();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
@@ -236,7 +236,7 @@ namespace msvcsharp.visual_sap_control
 			// fontLabel
 			// 
 			this.fontLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.fontLabel.Location = new System.Drawing.Point(700, 195);
+			this.fontLabel.Location = new System.Drawing.Point(560, 415);
 			this.fontLabel.Name = "fontLabel";
 			this.fontLabel.Size = new System.Drawing.Size(100, 23);
 			this.fontLabel.TabIndex = 6;
@@ -250,32 +250,32 @@ namespace msvcsharp.visual_sap_control
 			// 
 			this.groupBox2.Controls.Add(this.usbRadioButton);
 			this.groupBox2.Controls.Add(this.comRadioButton);
-			this.groupBox2.Location = new System.Drawing.Point(773, 181);
+			this.groupBox2.Location = new System.Drawing.Point(734, 185);
 			this.groupBox2.Name = "groupBox2";
 			this.groupBox2.Size = new System.Drawing.Size(253, 155);
 			this.groupBox2.TabIndex = 7;
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "Connection Type";
 			// 
-			// comRadioButton
-			// 
-			this.comRadioButton.Location = new System.Drawing.Point(16, 40);
-			this.comRadioButton.Name = "comRadioButton";
-			this.comRadioButton.Size = new System.Drawing.Size(104, 24);
-			this.comRadioButton.TabIndex = 0;
-			this.comRadioButton.TabStop = true;
-			this.comRadioButton.Text = "COM";
-			this.comRadioButton.UseVisualStyleBackColor = true;
-			// 
 			// usbRadioButton
 			// 
-			this.usbRadioButton.Location = new System.Drawing.Point(16, 82);
+			this.usbRadioButton.Location = new System.Drawing.Point(6, 70);
 			this.usbRadioButton.Name = "usbRadioButton";
 			this.usbRadioButton.Size = new System.Drawing.Size(104, 24);
 			this.usbRadioButton.TabIndex = 1;
 			this.usbRadioButton.TabStop = true;
 			this.usbRadioButton.Text = "USB";
 			this.usbRadioButton.UseVisualStyleBackColor = true;
+			// 
+			// comRadioButton
+			// 
+			this.comRadioButton.Location = new System.Drawing.Point(6, 40);
+			this.comRadioButton.Name = "comRadioButton";
+			this.comRadioButton.Size = new System.Drawing.Size(104, 24);
+			this.comRadioButton.TabIndex = 0;
+			this.comRadioButton.TabStop = true;
+			this.comRadioButton.Text = "COM";
+			this.comRadioButton.UseVisualStyleBackColor = true;
 			// 
 			// SettingsForm
 			// 
