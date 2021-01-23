@@ -246,6 +246,7 @@ namespace msvcsharp.visual_sap_control
 			this.Text = "SettingsForm";
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SettingsFormFormClosed);
 			this.Load += new System.EventHandler(this.SettingsFormLoad);
+			this.SizeChanged += new System.EventHandler(this.SettingsFormSizeChanged);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();

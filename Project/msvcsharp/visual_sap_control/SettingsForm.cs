@@ -22,9 +22,16 @@ namespace msvcsharp.visual_sap_control
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
-		void SettingsFormLoad(object sender, EventArgs e)
+		
+		public void AddProductToGrid(ProductProperties product)
+		{
+			dataGridView.Rows.Add(product.ProductName, product.BarcodeExample, product.BarcodeMask, product.FirmwareFile, product.NfcFile);
+		}
+		
+		public void InitializeGrid()
 		{
 			dataGridView.Font = fontLabel.Font;
+			dataGridView.Width = this.Width - 50;
 			
 			var column1 = new DataGridViewColumn();
 			column1.HeaderText = "Product Name"; //текст в шапке
@@ -50,6 +57,7 @@ namespace msvcsharp.visual_sap_control
 			column5.HeaderText = "Nfc File";
 			column5.Name = "NfcFile";
 			column5.CellTemplate = new DataGridViewTextBoxCell();
+			dataGridView.Columns.Clear();
 
 			dataGridView.Columns.Add(column1);
 			dataGridView.Columns.Add(column2);
@@ -57,27 +65,26 @@ namespace msvcsharp.visual_sap_control
 			dataGridView.Columns.Add(column4);
 			dataGridView.Columns.Add(column5);
 			
-			dataGridView.Rows.Add();
 			dataGridView.ReadOnly = true;
+			dataGridView.AllowUserToAddRows = false;
+			
+		
 
-			dataGridView.AllowUserToAddRows = false; //запрешаем пользователю самому добавлять строки
-			for (int i = 0; i < dataGridView.Columns.Count - 1; i++) {
+			
+		}
+		
+		public void ResizeGrid()
+		{
+			
+			for (int i = 0; i < dataGridView.Columns.Count; i++) {
 				dataGridView.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 			}
-			dataGridView.Columns[dataGridView.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-
-			for (int i = 0; i < dataGridView.Columns.Count; i++) {
-				int colw = dataGridView.Columns[i].Width;
-				dataGridView.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
-				dataGridView.Columns[i].Width = colw;
-			}
+		}
 			
-			
-		    //	dataGridView.AutoResizeColumns();            
-			//dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
-			//dataGridView.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-			//dataGridView.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
-	
+		public void SettingsFormLoad(object sender, EventArgs e)
+		{
+			InitializeGrid();
+			ResizeGrid();
 		}
 		void SettingsFormFormClosed(object sender, FormClosedEventArgs e)
 		{
@@ -87,7 +94,18 @@ namespace msvcsharp.visual_sap_control
 		}
 		void AddProductButtonClick(object sender, EventArgs e)
 		{
-			
+			ProductProperties product = new ProductProperties();
+			product.ProductName = productNameTextBox.Text;
+			product.BarcodeExample = barcodeExampleTextBox.Text;
+			product.BarcodeMask = barcodeMaskTextBox.Text;
+			product.FirmwareFile = firmwareFileTextBox.Text;
+			product.NfcFile = nfcFileTextBox.Text;
+			AddProductToGrid(product);
+		}
+		void SettingsFormSizeChanged(object sender, EventArgs e)
+		{
+			dataGridView.Width = this.Width - 50;
+			ResizeGrid();
 	
 		}
 	}
