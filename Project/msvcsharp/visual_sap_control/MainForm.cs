@@ -713,9 +713,6 @@ namespace visual_sap_control
 		void Button7Click(object sender, EventArgs e)
 		{
 			
-		
-		
-			
 		}
 		
 		

@@ -6,6 +6,7 @@ using visual_sap_control;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.IO;
 
 namespace msvcsharp.visual_sap_control
 {
@@ -45,6 +46,18 @@ namespace msvcsharp.visual_sap_control
 			ResizeGrid();
 		}
 		
+		public void SaveProperties()
+		{
+			List<string> listToSave = new List<string>();
+			foreach (ProductProperties prod in productsDataList)
+			{
+				const string sep = "||";
+				string line = prod.ProductName + sep + prod.BarcodeExample + sep + prod.BarcodeMask + sep + prod.FirmwareFile + sep + prod.NfcFile;
+				listToSave.Add(line);
+			}
+			File.WriteAllLines("settings.ini", listToSave);
+		}
+		
 		public void ResizeGrid()
 		{
 			for (int i = 0; i < dataGridView.Columns.Count; i++) {
@@ -78,10 +91,9 @@ namespace msvcsharp.visual_sap_control
 		
 		void SettingsFormFormClosed(object sender, FormClosedEventArgs e)
 		{
+			SaveProperties();
 			MainForm form = new MainForm();
-			
-			form.Show();
-			
+			form.Show();	
 		}
 		void AddProductButtonClick(object sender, EventArgs e)
 		{
@@ -117,7 +129,7 @@ namespace msvcsharp.visual_sap_control
 		
 		void DeleteProcuctButtonClick(object sender, EventArgs e)
 		{
-			if (MessageBox.Show("Are you sure to delete selected product?", "Deletion Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes) 
+			if (MessageBox.Show("Delete selected product?", "Deletion Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes) 
 			{
 				productsDataList.RemoveAt(dataGridView.CurrentCell.RowIndex);
 				ClearTextBoxes();
@@ -135,12 +147,11 @@ namespace msvcsharp.visual_sap_control
 		}
 		void EditProductButtonClick(object sender, EventArgs e)
 		{
-			if (MessageBox.Show("Are you sure to delete selected product?", "Deletion Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes) 
+			if (MessageBox.Show("Edit selected product?", "Edition Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes) 
 			{
-				
+				productsDataList[dataGridView.CurrentCell.RowIndex] = GetProduct();
+				UpdateGrid();
 			}
-			
-	
 		}
 	}
 }
