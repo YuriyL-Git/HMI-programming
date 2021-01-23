@@ -57,11 +57,11 @@
     <None Include="visual_sap_control\Properties\Settings.settings" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="visual_sap_control\Form1.cs">
+    <Compile Include="visual_sap_control\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="visual_sap_control\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="visual_sap_control\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="visual_sap_control\cyclone_control_api.cs" />
     <Compile Include="visual_sap_control\Program.cs" />
@@ -71,8 +71,8 @@
     <Compile Include="visual_sap_control\Properties\Settings.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="visual_sap_control\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="visual_sap_control\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="visual_sap_control\Properties\Resources.resx" />
   </ItemGroup>

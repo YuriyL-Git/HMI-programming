@@ -88,3 +88,12 @@ C:\Temp\HMI-VEL_programming_new\HMI-VEL_programming_new\controlsdk_1\Project\msv
 C:\Temp\HMI-VEL_programming_new\HMI-VEL_programming_new\controlsdk_1\Project\msvcsharp\obj\x86\Debug\HMI-VEL programming.exe
 C:\Temp\HMI-VEL_programming_new\HMI-VEL_programming_new\controlsdk_1\Project\msvcsharp\obj\x86\Debug\HMI-VEL programming.pdb
 C:\Temp\HMI-VEL_programming_new\controlsdk_1\Project\msvcsharp\obj\x86\Debug\visual_sap_control.Form1.resources
+C:\GitRepository\HMI-VEL_programming_new\controlsdk_1\Project\msvcsharp\Debug\HMI-VEL programming.exe.config
+C:\GitRepository\HMI-VEL_programming_new\controlsdk_1\Project\msvcsharp\Debug\HMI-VEL programming.exe
+C:\GitRepository\HMI-VEL_programming_new\controlsdk_1\Project\msvcsharp\Debug\HMI-VEL programming.pdb
+C:\GitRepository\HMI-VEL_programming_new\controlsdk_1\Project\msvcsharp\obj\x86\Debug\msvcsharp.csprojResolveAssemblyReference.cache
+C:\GitRepository\HMI-VEL_programming_new\controlsdk_1\Project\msvcsharp\obj\x86\Debug\msvcsharp.visual_sap_control.Properties.Resources.resources
+C:\GitRepository\HMI-VEL_programming_new\controlsdk_1\Project\msvcsharp\obj\x86\Debug\msvcsharp.csproj.GenerateResource.Cache
+C:\GitRepository\HMI-VEL_programming_new\controlsdk_1\Project\msvcsharp\obj\x86\Debug\HMI-VEL programming.exe
+C:\GitRepository\HMI-VEL_programming_new\controlsdk_1\Project\msvcsharp\obj\x86\Debug\HMI-VEL programming.pdb
+C:\GitRepository\HMI-VEL_programming_new\controlsdk_1\Project\msvcsharp\obj\x86\Debug\visual_sap_control.MainForm.resources

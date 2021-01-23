@@ -19,7 +19,7 @@ using visual_sap_control.Properties;
 namespace visual_sap_control
 {
 	
-	public partial class Form1 : Form
+	public partial class MainForm : Form
 	{
 		[STAThread]
 		
@@ -58,7 +58,7 @@ namespace visual_sap_control
 			
 		}
 		
-		public Form1()
+		public MainForm()
 		{
 			InitializeComponent();
 		}
@@ -450,7 +450,7 @@ namespace visual_sap_control
 		}
 		
 
-		private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+		private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			cyclone_control_api.disconnectFromAllCyclones();
 			
@@ -458,7 +458,7 @@ namespace visual_sap_control
 
 		 
 		
-		void Form1Load(object sender, EventArgs e)
+		void MainFormLoad(object sender, EventArgs e)
 		{
 			GlobalVar.FormActiveFocusFlag = false;
 			this.Size = new Size(900, 750);
@@ -565,7 +565,7 @@ namespace visual_sap_control
 		}
 		
 	
-		void Form1Activated(object sender, EventArgs e)
+		void MainFormActivated(object sender, EventArgs e)
 		{
 			GlobalVar.FormActiveFocusFlag = false;
 			
@@ -599,7 +599,7 @@ namespace visual_sap_control
 			
 		}
 
-		void Form1DoubleClick(object sender, EventArgs e)
+		void MainFormDoubleClick(object sender, EventArgs e)
 		{
 			this.WindowState = FormWindowState.Minimized;
 			ExecuteProgram();
@@ -686,7 +686,7 @@ namespace visual_sap_control
 		}
 
 	
-		void Form1Paint(object sender, PaintEventArgs e)
+		void MainFormPaint(object sender, PaintEventArgs e)
 		{
 			Graphics gs = this.CreateGraphics();
             Brush br1 = new SolidBrush(Color.SteelBlue );
@@ -745,6 +745,16 @@ namespace visual_sap_control
 		}
 		
 		
+	}
+	
+	public class Product
+	{
+		
+		public string BarcodeMask
+        { 
+			get;
+			set;
+        }
 	}
 	
 	

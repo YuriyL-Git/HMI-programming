@@ -1,6 +1,6 @@
 namespace visual_sap_control
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace visual_sap_control
         private void InitializeComponent()
         {
         	this.components = new System.ComponentModel.Container();
-        	System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+        	System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
         	this.button2 = new System.Windows.Forms.Button();
         	this.textBox1 = new System.Windows.Forms.TextBox();
         	this.ProgrammingPassCheckBox = new System.Windows.Forms.CheckBox();
@@ -421,9 +421,9 @@ namespace visual_sap_control
         	// 
         	// propertyGrid
         	// 
-        	this.propertyGrid.Location = new System.Drawing.Point(29, 44);
+        	this.propertyGrid.Location = new System.Drawing.Point(54, 38);
         	this.propertyGrid.Name = "propertyGrid";
-        	this.propertyGrid.Size = new System.Drawing.Size(201, 172);
+        	this.propertyGrid.Size = new System.Drawing.Size(217, 201);
         	this.propertyGrid.TabIndex = 70;
         	// 
         	// button3
@@ -436,7 +436,7 @@ namespace visual_sap_control
         	this.button3.UseVisualStyleBackColor = true;
         	this.button3.Click += new System.EventHandler(this.Button3Click);
         	// 
-        	// Form1
+        	// MainForm
         	// 
         	this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         	this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -479,16 +479,16 @@ namespace visual_sap_control
         	this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
         	this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
         	this.KeyPreview = true;
-        	this.Name = "Form1";
+        	this.Name = "MainForm";
         	this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
         	this.Text = "HMI-VEL programming";
         	this.TopMost = true;
         	this.TransparencyKey = System.Drawing.Color.Azure;
-        	this.Activated += new System.EventHandler(this.Form1Activated);
-        	this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-        	this.Load += new System.EventHandler(this.Form1Load);
-        	this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1Paint);
-        	this.DoubleClick += new System.EventHandler(this.Form1DoubleClick);
+        	this.Activated += new System.EventHandler(this.MainFormActivated);
+        	this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
+        	this.Load += new System.EventHandler(this.MainFormLoad);
+        	this.Paint += new System.Windows.Forms.PaintEventHandler(this.MainFormPaint);
+        	this.DoubleClick += new System.EventHandler(this.MainFormDoubleClick);
         	((System.ComponentModel.ISupportInitialize)(this.OkWait)).EndInit();
         	((System.ComponentModel.ISupportInitialize)(this.OkProg)).EndInit();
         	((System.ComponentModel.ISupportInitialize)(this.OkSet)).EndInit();
