@@ -148,12 +148,19 @@ namespace visual_sap_control
 			{
 				ProductProperties product = new ProductProperties();
 				string[] data = prop.Split(new string[] { "||" }, StringSplitOptions.None);
-				product.ProductName = data[0];
-				product.BarcodeExample = data[1];
-				product.BarcodeMask = data[2];
-				product.FirmwareFile = data[3];
-				product.NfcFile = data[4];
-				productsDataList.Add(product);
+				if (data.Length == 5)
+				{
+				    product.ProductName = data[0];
+					product.BarcodeExample = data[1];
+					product.BarcodeMask = data[2];
+					product.FirmwareFile = data[3];
+					product.NfcFile = data[4];
+					productsDataList.Add(product);
+				} else 
+				{
+					MessageBox.Show("Please check settings.ini file! There should not be empty or incorrect filled lines!");
+				}
+				
 			}
 		}
 		

@@ -46,6 +46,28 @@ namespace msvcsharp.visual_sap_control
 			ResizeGrid();
 		}
 		
+	    public void LoadProperties()
+		{
+			List<string> propertyFileLines = File.ReadAllLines(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\settings.ini").ToList();
+			foreach (string prop in propertyFileLines) 
+			{
+				ProductProperties product = new ProductProperties();
+				string[] data = prop.Split(new string[] { "||" }, StringSplitOptions.None);
+				if (data.Length == 5)
+				{
+				    product.ProductName = data[0];
+					product.BarcodeExample = data[1];
+					product.BarcodeMask = data[2];
+					product.FirmwareFile = data[3];
+					product.NfcFile = data[4];
+					productsDataList.Add(product);
+				} else 
+				{
+					MessageBox.Show("Please check settings.ini file! There should not be empty or incorrect filled lines!");
+				}
+			}
+		}
+		
 		public void SaveProperties()
 		{
 			List<string> listToSave = new List<string>();
@@ -87,12 +109,15 @@ namespace msvcsharp.visual_sap_control
 		{
 			PasswordForm passwordform = new PasswordForm();
 			
+			passwordform.StartPosition = FormStartPosition.CenterScreen;
+			
 			if (passwordform.ShowDialog() != DialogResult.OK)
 			{
 				this.Close();
 			} 
 			else
 			{
+				LoadProperties();
 				UpdateGrid();
 			}
 		}
@@ -100,6 +125,7 @@ namespace msvcsharp.visual_sap_control
 		void SettingsFormFormClosed(object sender, FormClosedEventArgs e)
 		{
 			SaveProperties();
+			productsDataList = null;
 			MainForm form = new MainForm();
 			form.Show();
 		}
