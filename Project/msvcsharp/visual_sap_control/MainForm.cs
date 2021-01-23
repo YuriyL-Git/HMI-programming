@@ -554,6 +554,7 @@ namespace visual_sap_control
 		}
 		void buttonCloseClick(object sender, EventArgs e)
 		{
+			Application.Exit();
 			Close();
 			
 		}

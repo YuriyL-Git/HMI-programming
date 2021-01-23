@@ -27,9 +27,11 @@ namespace msvcsharp.visual_sap_control
 			this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
 			
 			this.Hide();
+			this.Visible = false;
+			this.ShowInTaskbar = false; // Remove from taskbar.
+            this.Opacity = 0;
 			MainForm mainForm = new MainForm();
 			mainForm.Show();
-	
 		}
 	}
 }
