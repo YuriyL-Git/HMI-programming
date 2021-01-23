@@ -70,8 +70,8 @@ namespace msvcsharp.visual_sap_control
 		{
 			ProductProperties product = new ProductProperties();
 			product.ProductName = productNameTextBox.Text;
-			product.BarcodeExample = barcodeExampleTextBox.Text;
-			product.BarcodeMask = barcodeMaskTextBox.Text;
+			product.BarcodeExample = barcodeExampleTextBox.Text.ToUpper();
+			product.BarcodeMask = barcodeMaskTextBox.Text.ToUpper();
 			product.FirmwareFile = firmwareFileTextBox.Text;
 			product.NfcFile = nfcFileTextBox.Text;
 			return product;
@@ -114,7 +114,7 @@ namespace msvcsharp.visual_sap_control
 		
 		void OpentFirmwareButtonClick(object sender, EventArgs e)
 		{
-			openFileDialog.Filter = "All files(*.*)|*.*";
+			openFileDialog.Filter = "Cyclone Image Files(*.*)|*.sap";
 			if (openFileDialog.ShowDialog() == DialogResult.OK) {
 				firmwareFileTextBox.Text = openFileDialog.FileName;
 			}

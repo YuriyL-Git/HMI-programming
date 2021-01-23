@@ -141,7 +141,6 @@ namespace visual_sap_control
 				product.NfcFile = data[4];
 				productsDataList.Add(product);
 			}
-			
 		}
 		
 		public static void CycloneEraseAllImages ()
@@ -187,6 +186,13 @@ namespace visual_sap_control
 			while (!(cyclone1done));
 		}
 		
+		public void CheckToUpdateFirmware(string serialNumber)
+		{
+			//TODO Create procedure for updating Firmware and NFC file if needed
+			
+			
+		}
+		
 		
 		
 		//Main procedure----------------------------------------------
@@ -194,6 +200,7 @@ namespace visual_sap_control
 		{
 			String pathToUtlDirectory = @"C:\UTL070";
 			String serialNumber = textBox1.Text.ToUpper();
+			CheckToUpdateFirmware(serialNumber);
 			textBox1.Text = "";
 			string failMessage = "";
 			GlobalVar.boardPassed = true;
@@ -536,11 +543,11 @@ namespace visual_sap_control
 
 		void TextBox1KeyPress(object sender, KeyPressEventArgs e)
 		{
-			if (e.KeyChar == (char)Keys.Enter) {
+			if (e.KeyChar == (char)Keys.Enter)
+			{
 				e.Handled = true;
 				backgroundWorker2.RunWorkerAsync(100);
 			}
-			
 		}
 
 		private int BackgroundProcessLogicMethod(BackgroundWorker bw, int a)
