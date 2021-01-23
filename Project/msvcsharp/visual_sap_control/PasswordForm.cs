@@ -41,5 +41,10 @@ namespace msvcsharp.visual_sap_control
 				buttonOk.PerformClick();
             }
         }
+		void PasswordFormLoad(object sender, EventArgs e)
+		{
+			passwordTextBox.PasswordChar = '*';
+			passwordTextBox.Focus();
+		}
 	}
 }

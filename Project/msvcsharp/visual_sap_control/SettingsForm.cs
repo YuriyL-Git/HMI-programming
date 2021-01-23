@@ -35,7 +35,7 @@ namespace msvcsharp.visual_sap_control
 			dataGridView.Width = this.Width - 50;
 			dataGridView.DataSource = productsDataList;
 			
-			dataGridView.Columns[0].HeaderText = "Product Name"; 
+			dataGridView.Columns[0].HeaderText = "Product Name";
 			dataGridView.Columns[1].HeaderText = "Barcode Example";
 			dataGridView.Columns[2].HeaderText = "Barcode Mask";
 			dataGridView.Columns[3].HeaderText = "Firmware File";
@@ -86,18 +86,22 @@ namespace msvcsharp.visual_sap_control
 		public void SettingsFormLoad(object sender, EventArgs e)
 		{
 			PasswordForm passwordform = new PasswordForm();
-			if (passwordform.ShowDialog() != DialogResult.OK) {
-				// The user canceled.
+			
+			if (passwordform.ShowDialog() != DialogResult.OK)
+			{
 				this.Close();
+			} 
+			else
+			{
+				UpdateGrid();
 			}
-			UpdateGrid();
 		}
 		
 		void SettingsFormFormClosed(object sender, FormClosedEventArgs e)
 		{
 			SaveProperties();
 			MainForm form = new MainForm();
-			form.Show();	
+			form.Show();
 		}
 		void AddProductButtonClick(object sender, EventArgs e)
 		{

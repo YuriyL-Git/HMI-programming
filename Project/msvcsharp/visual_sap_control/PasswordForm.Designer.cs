@@ -62,6 +62,7 @@ namespace msvcsharp.visual_sap_control
 			this.Controls.Add(this.buttonOk);
 			this.Name = "PasswordForm";
 			this.Text = "PasswordForm";
+			this.Load += new System.EventHandler(this.PasswordFormLoad);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
