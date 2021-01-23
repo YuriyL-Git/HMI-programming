@@ -252,7 +252,7 @@ namespace msvcsharp.visual_sap_control
 			this.groupBox2.Controls.Add(this.comRadioButton);
 			this.groupBox2.Location = new System.Drawing.Point(734, 185);
 			this.groupBox2.Name = "groupBox2";
-			this.groupBox2.Size = new System.Drawing.Size(253, 155);
+			this.groupBox2.Size = new System.Drawing.Size(231, 124);
 			this.groupBox2.TabIndex = 7;
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "Connection Type";
@@ -263,12 +263,13 @@ namespace msvcsharp.visual_sap_control
 			this.usbRadioButton.Name = "usbRadioButton";
 			this.usbRadioButton.Size = new System.Drawing.Size(104, 24);
 			this.usbRadioButton.TabIndex = 1;
-			this.usbRadioButton.TabStop = true;
 			this.usbRadioButton.Text = "USB";
 			this.usbRadioButton.UseVisualStyleBackColor = true;
+			this.usbRadioButton.CheckedChanged += new System.EventHandler(this.UsbRadioButtonCheckedChanged);
 			// 
 			// comRadioButton
 			// 
+			this.comRadioButton.Checked = true;
 			this.comRadioButton.Location = new System.Drawing.Point(6, 40);
 			this.comRadioButton.Name = "comRadioButton";
 			this.comRadioButton.Size = new System.Drawing.Size(104, 24);
@@ -276,6 +277,7 @@ namespace msvcsharp.visual_sap_control
 			this.comRadioButton.TabStop = true;
 			this.comRadioButton.Text = "COM";
 			this.comRadioButton.UseVisualStyleBackColor = true;
+			this.comRadioButton.CheckedChanged += new System.EventHandler(this.ComRadioButtonCheckedChanged);
 			// 
 			// SettingsForm
 			// 

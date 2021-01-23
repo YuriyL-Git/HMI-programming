@@ -48,7 +48,6 @@ namespace msvcsharp.visual_sap_control
 		
 		public void SaveProperties()
 		{
-			MessageBox.Show("save");
 			List<string> listToSave = new List<string>();
 			foreach (ProductProperties prod in productsDataList)
 			{
@@ -153,6 +152,14 @@ namespace msvcsharp.visual_sap_control
 				productsDataList[dataGridView.CurrentCell.RowIndex] = GetProduct();
 				UpdateGrid();
 			}
+		}
+		void ComRadioButtonCheckedChanged(object sender, EventArgs e)
+		{
+			MessageBox.Show("COM");
+		}
+		void UsbRadioButtonCheckedChanged(object sender, EventArgs e)
+		{
+			MessageBox.Show("USB");
 		}
 	}
 }
