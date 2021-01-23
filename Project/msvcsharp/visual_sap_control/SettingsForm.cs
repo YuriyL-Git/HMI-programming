@@ -48,6 +48,7 @@ namespace msvcsharp.visual_sap_control
 		
 		public void SaveProperties()
 		{
+			MessageBox.Show("save");
 			List<string> listToSave = new List<string>();
 			foreach (ProductProperties prod in productsDataList)
 			{
@@ -55,7 +56,7 @@ namespace msvcsharp.visual_sap_control
 				string line = prod.ProductName + sep + prod.BarcodeExample + sep + prod.BarcodeMask + sep + prod.FirmwareFile + sep + prod.NfcFile;
 				listToSave.Add(line);
 			}
-			File.WriteAllLines("settings.ini", listToSave);
+			File.WriteAllLines(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\settings.ini", listToSave);
 		}
 		
 		public void ResizeGrid()

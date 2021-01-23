@@ -57,9 +57,8 @@ namespace visual_sap_control
 			public static UInt32 connection_type { get; set; }
 			public static UInt32 handle { get; set; }
 			
-			public static List<ProductProperties> productsData = new List<ProductProperties>();
-			
 		}
+		public static List<ProductProperties> productsDataList = new List<ProductProperties>();
 		
 		public MainForm()
 		{
@@ -103,11 +102,7 @@ namespace visual_sap_control
 			}
 			
 		}
-		/// <summary>
-		/// connectionType = "USB" or connectionType ="COM"
-		/// </summary>
-		/// <param name="connectionType"></param>
-		/// <param name="portname"></param>
+
 		public void CycloneInit (String connectionType, int portNumber )
 		{
 			cyclone_control_api.enumerateAllPorts();
@@ -130,6 +125,23 @@ namespace visual_sap_control
 				MessageBox.Show("Error Opening Device");
 
 			} 
+		}
+		
+		public void LoadProperties()
+		{
+			List<string> propertyFileLines = File.ReadAllLines(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\settings.ini").ToList();
+			foreach (string prop in propertyFileLines) 
+			{
+				ProductProperties product = new ProductProperties();
+				string[] data = prop.Split(new string[] { "||" }, StringSplitOptions.None);
+				product.ProductName = data[0];
+				product.BarcodeExample = data[1];
+				product.BarcodeMask = data[2];
+				product.FirmwareFile = data[3];
+				product.NfcFile = data[4];
+				productsDataList.Add(product);
+			}
+			
 		}
 		
 		public static void CycloneEraseAllImages ()
@@ -463,6 +475,7 @@ namespace visual_sap_control
 		
 		void MainFormLoad(object sender, EventArgs e)
 		{
+			LoadProperties();
 			GlobalVar.FormActiveFocusFlag = false;
 			this.Size = new Size(900, 750);
 		//	this.timer1.Start();
