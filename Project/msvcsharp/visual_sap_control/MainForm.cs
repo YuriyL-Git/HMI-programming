@@ -57,6 +57,8 @@ namespace visual_sap_control
 			public static UInt32 connection_type { get; set; }
 			public static UInt32 handle { get; set; }
 			
+			public static List<ProductProperties> productsData = new List<ProductProperties>();
+			
 		}
 		
 		public MainForm()
@@ -744,6 +746,7 @@ namespace visual_sap_control
 		void ButtonSettingsClick(object sender, EventArgs e)
 		{
 			SettingsForm settingsForm = new SettingsForm();
+			settingsForm.Show();
 			
 		}
 		
