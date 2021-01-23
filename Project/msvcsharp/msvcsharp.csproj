@@ -57,6 +57,10 @@
     <None Include="visual_sap_control\Properties\Settings.settings" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="visual_sap_control\EntryForm.cs" />
+    <Compile Include="visual_sap_control\EntryForm.Designer.cs">
+      <DependentUpon>EntryForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="visual_sap_control\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +80,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="visual_sap_control\EntryForm.resx">
+      <DependentUpon>EntryForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="visual_sap_control\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
