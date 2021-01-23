@@ -136,6 +136,7 @@ namespace msvcsharp.visual_sap_control
 			this.openNfcButton.TabIndex = 13;
 			this.openNfcButton.Text = "Open Nfc";
 			this.openNfcButton.UseVisualStyleBackColor = true;
+			this.openNfcButton.Click += new System.EventHandler(this.OpenNfcButtonClick);
 			// 
 			// nfcFileTextBox
 			// 
@@ -221,6 +222,7 @@ namespace msvcsharp.visual_sap_control
 			this.deleteProcuctButton.TabIndex = 5;
 			this.deleteProcuctButton.Text = "Delete product";
 			this.deleteProcuctButton.UseVisualStyleBackColor = true;
+			this.deleteProcuctButton.Click += new System.EventHandler(this.DeleteProcuctButtonClick);
 			// 
 			// fontLabel
 			// 
