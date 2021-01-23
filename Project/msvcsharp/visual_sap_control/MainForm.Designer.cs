@@ -66,7 +66,6 @@ namespace visual_sap_control
         	this.SerNumLabel = new System.Windows.Forms.Label();
         	this.button7 = new System.Windows.Forms.Button();
         	this.TextBoxTest = new System.Windows.Forms.TextBox();
-        	this.propertyGrid = new System.Windows.Forms.PropertyGrid();
         	this.button3 = new System.Windows.Forms.Button();
         	this.buttonSettings = new System.Windows.Forms.Button();
         	((System.ComponentModel.ISupportInitialize)(this.OkWait)).BeginInit();
@@ -420,13 +419,6 @@ namespace visual_sap_control
         	this.TextBoxTest.TabIndex = 69;
         	this.TextBoxTest.Text = "USB";
         	// 
-        	// propertyGrid
-        	// 
-        	this.propertyGrid.Location = new System.Drawing.Point(54, 38);
-        	this.propertyGrid.Name = "propertyGrid";
-        	this.propertyGrid.Size = new System.Drawing.Size(217, 201);
-        	this.propertyGrid.TabIndex = 70;
-        	// 
         	// button3
         	// 
         	this.button3.Location = new System.Drawing.Point(705, 216);
@@ -460,7 +452,6 @@ namespace visual_sap_control
         	this.ControlBox = false;
         	this.Controls.Add(this.buttonSettings);
         	this.Controls.Add(this.button3);
-        	this.Controls.Add(this.propertyGrid);
         	this.Controls.Add(this.TextBoxTest);
         	this.Controls.Add(this.button7);
         	this.Controls.Add(this.SerNumLabel);
@@ -563,7 +554,6 @@ namespace visual_sap_control
         private System.Windows.Forms.Label SerNumLabel;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TextBox TextBoxTest;
-        private System.Windows.Forms.PropertyGrid propertyGrid;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button buttonSettings;
     }

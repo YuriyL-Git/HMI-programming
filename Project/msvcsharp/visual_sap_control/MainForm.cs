@@ -709,13 +709,7 @@ namespace visual_sap_control
 		void Button7Click(object sender, EventArgs e)
 		{
 			
-			//CycloneInit(TextBoxTest.Text,1);
-			Property properties = new Property();
-			
-			properties.ConnectionType.Add("COM");
-			properties.ConnectionType.Add("USB");
-			
-			propertyGrid.SelectedObject = properties;
+		
 		
 			
 		}
@@ -748,34 +742,6 @@ namespace visual_sap_control
 		
 		
 	}
-	
-	public class Product
-	{
-		
-		public string BarcodeMask
-        { 
-			get;
-			set;
-        }
-	}
-	
-	
-	
-	public class Property
-	{
-		public Property()
-		{
-		}
-		
-		private List<string> _connectionType = new List<string>();
-		[CategoryAttribute("ConnectionType"), DescriptionAttribute("COM or USB")]  
-        public List<string> ConnectionType
-        { 
-        	get { return _connectionType; }
-            set { _connectionType = value; }  
-        }
-        
-    }
 	
 	
 }

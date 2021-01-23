@@ -69,6 +69,10 @@
     <Compile Include="visual_sap_control\Properties\AssemblyInfo.cs" />
     <Compile Include="visual_sap_control\Properties\Resources.Designer.cs" />
     <Compile Include="visual_sap_control\Properties\Settings.Designer.cs" />
+    <Compile Include="visual_sap_control\SettingsForm.cs" />
+    <Compile Include="visual_sap_control\SettingsForm.Designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="visual_sap_control\MainForm.resx">
