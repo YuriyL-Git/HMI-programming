@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using visual_sap_control;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace msvcsharp.visual_sap_control
 {
@@ -23,56 +24,20 @@ namespace msvcsharp.visual_sap_control
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
-		
-		public static List<ProductProperties> productsDataList = new List<ProductProperties>();
-		
+		//public static BindingList<>
+		public static BindingList<ProductProperties> productsDataList = new BindingList<ProductProperties>();
 		public void AddProductToGrid(ProductProperties product)
 		{
 			dataGridView.Rows.Add(product.ProductName, product.BarcodeExample, product.BarcodeMask, product.FirmwareFile, product.NfcFile);
 		}
 		
-		public void InitializeGrid()
+		public void UpdateGrid()
 		{
 			dataGridView.Font = fontLabel.Font;
 			dataGridView.Width = this.Width - 50;
-			
-//			var column1 = new DataGridViewColumn();
-//			column1.HeaderText = "Product Name"; //текст в шапке
-//			column1.Name = "ProductName"; //текстовое имя колонки, его можно использовать вместо обращений по индексу
-//			column1.CellTemplate = new DataGridViewTextBoxCell(); //тип нашей колонки
-//
-//			var column2 = new DataGridViewColumn();
-//			column2.HeaderText = "Barcode Example";
-//			column2.Name = "BarcodeExample";
-//			column2.CellTemplate = new DataGridViewTextBoxCell();
-//
-//			var column3 = new DataGridViewColumn();
-//			column3.HeaderText = "Barcode Mask";
-//			column3.Name = "BarcodeMask";
-//			column3.CellTemplate = new DataGridViewTextBoxCell();
-//			
-//			var column4 = new DataGridViewColumn();
-//			column4.HeaderText = "Firmware File";
-//			column4.Name = "FirmwareFile";
-//			column4.CellTemplate = new DataGridViewTextBoxCell();
-//			
-//			var column5 = new DataGridViewColumn();
-//			column5.HeaderText = "Nfc File";
-//			column5.Name = "NfcFile";
-//			column5.CellTemplate = new DataGridViewTextBoxCell();
-//			dataGridView.Columns.Clear();
-//
-//			dataGridView.Columns.Add(column1);
-//			dataGridView.Columns.Add(column2);
-//			dataGridView.Columns.Add(column3);
-//			dataGridView.Columns.Add(column4);
-//			dataGridView.Columns.Add(column5);
-			 
-//				dataGridView1.Columns[1].Name = "Name";  
-//				dataGridView1.Columns[2].Name = "City"; 
-			dataGridView.DataSource = null;
+		
 			dataGridView.DataSource = productsDataList;
-			dataGridView.Refresh();
+			
 			dataGridView.Columns[0].HeaderText = "Product Name"; 
 			dataGridView.Columns[1].HeaderText = "Barcode Example";
 			dataGridView.Columns[2].HeaderText = "Barcode Mask";
@@ -80,8 +45,8 @@ namespace msvcsharp.visual_sap_control
 			dataGridView.Columns[4].HeaderText = "Nfc File";
 			dataGridView.ReadOnly = true;
 			dataGridView.AllowUserToAddRows = false;
+			dataGridView.Refresh();
 			ResizeGrid();
-			
 		}
 		
 		public void ResizeGrid()
@@ -93,8 +58,7 @@ namespace msvcsharp.visual_sap_control
 		
 		public void SettingsFormLoad(object sender, EventArgs e)
 		{
-			InitializeGrid();
-			ResizeGrid();
+			UpdateGrid();
 		}
 		void SettingsFormFormClosed(object sender, FormClosedEventArgs e)
 		{
@@ -112,10 +76,8 @@ namespace msvcsharp.visual_sap_control
 			product.FirmwareFile = firmwareFileTextBox.Text;
 			product.NfcFile = nfcFileTextBox.Text;
 			productsDataList.Add(product);
-			InitializeGrid();
+			UpdateGrid();
 			
-			
-			//AddProductToGrid(product);
 		}
 		void SettingsFormSizeChanged(object sender, EventArgs e)
 		{
@@ -138,20 +100,17 @@ namespace msvcsharp.visual_sap_control
 		void OpenNfcButtonClick(object sender, EventArgs e)
 		{
 			openFileDialog.Filter = "All files(*.*)|*.*";
-			if (openFileDialog.ShowDialog() == DialogResult.OK)
-			{
+			if (openFileDialog.ShowDialog() == DialogResult.OK) {
 				nfcFileTextBox.Text = openFileDialog.FileName;
 			}
 		}
 		void DeleteProcuctButtonClick(object sender, EventArgs e)
 		{
-			if (MessageBox.Show("Are you sure to delete selected product?", "Deletion Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
+			if (MessageBox.Show("Are you sure to delete selected product?", "Deletion Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes) 
 			{
-				//MessageBox.Show("ok");
-				
-				while (dataGridView.SelectedRows.Count > 0)
-					dataGridView.Rows.RemoveAt(dataGridView.SelectedRows[0].Index);
-						
+				//MessageBox.Show(dataGridView.CurrentCell.RowIndex.ToString());
+				productsDataList.RemoveAt(dataGridView.CurrentCell.RowIndex);
+				UpdateGrid();
 			}
 		}
 	}
