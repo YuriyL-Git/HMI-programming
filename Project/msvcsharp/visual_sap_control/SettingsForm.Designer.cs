@@ -53,6 +53,7 @@ namespace msvcsharp.visual_sap_control
 			this.Name = "SettingsForm";
 			this.ShowIcon = false;
 			this.Text = "SettingsForm";
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SettingsFormFormClosed);
 			this.Load += new System.EventHandler(this.SettingsFormLoad);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
 			this.ResumeLayout(false);

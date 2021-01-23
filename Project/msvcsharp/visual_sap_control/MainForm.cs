@@ -748,7 +748,7 @@ namespace visual_sap_control
 		{
 			SettingsForm settingsForm = new SettingsForm();
 			settingsForm.Show();
-			
+			this.Close();
 		}
 		
 		

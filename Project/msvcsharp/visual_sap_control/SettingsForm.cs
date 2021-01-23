@@ -2,6 +2,7 @@
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using visual_sap_control;
 
 namespace msvcsharp.visual_sap_control
 {
@@ -58,6 +59,12 @@ namespace msvcsharp.visual_sap_control
             dataGridView.Columns.Add(column5);
 
             dataGridView.AllowUserToAddRows = false; //запрешаем пользователю самому добавлять строки
+	
+		}
+		void SettingsFormFormClosed(object sender, FormClosedEventArgs e)
+		{
+			MainForm form = new MainForm();
+			form.Show();
 	
 		}
 	}
