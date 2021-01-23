@@ -103,9 +103,11 @@ namespace visual_sap_control
 			
 		}
 
-		public void CycloneInit (String connectionType, int portNumber )
+		public void CycloneInit ()
 		{
+			String connectionType = File.ReadAllText(System.IO.Path.GetDirectoryName(Application.ExecutablePath));
 			cyclone_control_api.enumerateAllPorts();
+			int portNumber = 1;
 			string portname ="";
 			if (connectionType.ToUpper().Equals("USB"))
 			{
@@ -162,7 +164,7 @@ namespace visual_sap_control
 		
 		public void CycloneExecuteProgramming()
 		{
-			CycloneInit(TextBoxTest.Text,1);
+			CycloneInit();
 			cyclone_control_api.startImageExecution(GlobalVar.handle, 1);
 			Application.DoEvents();
 			bool cyclone1done = false;
@@ -762,6 +764,11 @@ namespace visual_sap_control
 			this.Close();
 			settingsForm.Show();
 			
+		}
+		void Button7Click(object sender, EventArgs e)
+		{
+			CycloneInit();
+	
 		}
 		
 		

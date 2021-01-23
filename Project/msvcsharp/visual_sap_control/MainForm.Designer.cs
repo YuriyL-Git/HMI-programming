@@ -408,6 +408,7 @@ namespace visual_sap_control
         	this.button7.TabIndex = 68;
         	this.button7.Text = "TestButton";
         	this.button7.UseVisualStyleBackColor = true;
+        	this.button7.Click += new System.EventHandler(this.Button7Click);
         	// 
         	// TextBoxTest
         	// 

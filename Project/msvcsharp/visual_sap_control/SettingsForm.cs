@@ -155,11 +155,17 @@ namespace msvcsharp.visual_sap_control
 		}
 		void ComRadioButtonCheckedChanged(object sender, EventArgs e)
 		{
-			MessageBox.Show("COM");
+			if (comRadioButton.Checked) {
+				File.WriteAllText(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\conectiontype.ini", "COM");
+			}
+			
 		}
 		void UsbRadioButtonCheckedChanged(object sender, EventArgs e)
 		{
-			MessageBox.Show("USB");
+			if (usbRadioButton.Checked) {
+				File.WriteAllText(System.IO.Path.GetDirectoryName(Application.ExecutablePath) + @"\conectiontype.ini", "USB");
+			}
+			
 		}
 	}
 }
