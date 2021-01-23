@@ -27,27 +27,27 @@ namespace msvcsharp.visual_sap_control
 			dataGridView.Font = fontLabel.Font;
 			
 			var column1 = new DataGridViewColumn();
-			column1.HeaderText = "Product"; //текст в шапке
+			column1.HeaderText = "Product Name"; //текст в шапке
 			column1.Name = "ProductName"; //текстовое имя колонки, его можно использовать вместо обращений по индексу
 			column1.CellTemplate = new DataGridViewTextBoxCell(); //тип нашей колонки
 
 			var column2 = new DataGridViewColumn();
-			column2.HeaderText = "BarcodeExample"; 
+			column2.HeaderText = "Barcode Example"; 
 			column2.Name = "BarcodeExample";
 			column2.CellTemplate = new DataGridViewTextBoxCell();
 
 			var column3 = new DataGridViewColumn();
-			column3.HeaderText = "BarcodeMask";
+			column3.HeaderText = "Barcode Mask";
 			column3.Name = "BarcodeMask";
 			column3.CellTemplate = new DataGridViewTextBoxCell();
             
 			var column4 = new DataGridViewColumn();
-			column4.HeaderText = "FirmwareFile";
+			column4.HeaderText = "Firmware File";
 			column4.Name = "FirmwareFile";
 			column4.CellTemplate = new DataGridViewTextBoxCell();
             
 			var column5 = new DataGridViewColumn();
-			column5.HeaderText = "NfcFile";
+			column5.HeaderText = "Nfc File";
 			column5.Name = "NfcFile";
 			column5.CellTemplate = new DataGridViewTextBoxCell();
 
@@ -62,7 +62,7 @@ namespace msvcsharp.visual_sap_control
 
 			dataGridView.AllowUserToAddRows = false; //запрешаем пользователю самому добавлять строки
 			for (int i = 0; i < dataGridView.Columns.Count - 1; i++) {
-				dataGridView.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+				dataGridView.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 			}
 			dataGridView.Columns[dataGridView.Columns.Count - 1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
@@ -83,6 +83,11 @@ namespace msvcsharp.visual_sap_control
 		{
 			MainForm form = new MainForm();
 			form.Show();
+	
+		}
+		void AddProductButtonClick(object sender, EventArgs e)
+		{
+			
 	
 		}
 	}
