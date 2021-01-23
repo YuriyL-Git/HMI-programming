@@ -163,7 +163,7 @@ namespace visual_sap_control
         	this.buttonClose.TabIndex = 47;
         	this.buttonClose.Text = "X";
         	this.buttonClose.UseVisualStyleBackColor = false;
-        	this.buttonClose.Click += new System.EventHandler(this.Button5Click);
+        	this.buttonClose.Click += new System.EventHandler(this.buttonCloseClick);
         	// 
         	// buttonMinimize
         	// 
@@ -177,7 +177,7 @@ namespace visual_sap_control
         	this.buttonMinimize.TabIndex = 48;
         	this.buttonMinimize.Text = "–";
         	this.buttonMinimize.UseVisualStyleBackColor = false;
-        	this.buttonMinimize.Click += new System.EventHandler(this.Button6Click);
+        	this.buttonMinimize.Click += new System.EventHandler(this.buttonMinimizeClick);
         	// 
         	// ExecutingBox
         	// 
@@ -441,6 +441,7 @@ namespace visual_sap_control
         	this.buttonSettings.TabIndex = 72;
         	this.buttonSettings.Text = "⚙";
         	this.buttonSettings.UseVisualStyleBackColor = false;
+        	this.buttonSettings.Click += new System.EventHandler(this.ButtonSettingsClick);
         	// 
         	// MainForm
         	// 

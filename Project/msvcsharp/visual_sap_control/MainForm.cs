@@ -549,12 +549,12 @@ namespace visual_sap_control
 			this.timer1.Start();
 			
 		}
-		void Button5Click(object sender, EventArgs e)
+		void buttonCloseClick(object sender, EventArgs e)
 		{
 			Close();
 			
 		}
-		void Button6Click(object sender, EventArgs e)
+		void buttonMinimizeClick(object sender, EventArgs e)
 		{
 			this.WindowState = FormWindowState.Minimized;
 			GlobalVar.FormActiveFocusFlag = true;
@@ -738,6 +738,13 @@ namespace visual_sap_control
 			
 			//CycloneUpdateImage(@"C:\Temp\HMI_VEL_KE02_ATG_08_03_03_CRC_0xC1E5.sap");
 		
+		}
+		
+		void ButtonSettingsClick(object sender, EventArgs e)
+		{
+			
+			
+			
 		}
 		
 		

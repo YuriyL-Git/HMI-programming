@@ -79,6 +79,9 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="visual_sap_control\Properties\Resources.resx" />
+    <EmbeddedResource Include="visual_sap_control\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="visual_sap_control\visual_sap_control.csproj">
