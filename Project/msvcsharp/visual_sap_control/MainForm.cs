@@ -108,25 +108,36 @@ namespace visual_sap_control
 		{
 			
 			cyclone_control_api.enumerateAllPorts();
-			int portNumber = 1;
 			string portname ="";
 			if (connectionType.ToUpper().Equals("USB"))
 			{
 				GlobalVar.connection_type = cyclone_control_api.CyclonePortType_USB;
-				portname = "USB"+portNumber.ToString();
+				portname = "USB";
 			}
 			if (connectionType.ToUpper().Equals("COM"))
 			{
 				GlobalVar.connection_type = cyclone_control_api.CyclonePortType_Serial;
-				portname = "COM"+portNumber.ToString();
+				portname = "COM";
+			}
+			
+			bool cycloneIsFound = false;
+			GlobalVar.handle = 0;
+			
+			for (int i = 1; i < 20; i++) 
+			{
+				GlobalVar.handle = cyclone_control_api.connectToCyclone(portname+i);
+				if (GlobalVar.handle > 0) 
+				{
+					cycloneIsFound = true;
+					break;
+				}
 			}
 			
 			
-			GlobalVar.handle = cyclone_control_api.connectToCyclone(portname);
-			if (GlobalVar.handle == 0) {
+			if (!cycloneIsFound)
+			{
 				this.WindowState = FormWindowState.Minimized;
 				MessageBox.Show("Error Opening Device");
-
 			} 
 		}
 		

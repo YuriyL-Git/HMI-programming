@@ -49,8 +49,7 @@ namespace msvcsharp.visual_sap_control
 		public void SaveProperties()
 		{
 			List<string> listToSave = new List<string>();
-			foreach (ProductProperties prod in productsDataList)
-			{
+			foreach (ProductProperties prod in productsDataList) {
 				const string sep = "||";
 				string line = prod.ProductName + sep + prod.BarcodeExample + sep + prod.BarcodeMask + sep + prod.FirmwareFile + sep + prod.NfcFile;
 				listToSave.Add(line);
@@ -86,6 +85,11 @@ namespace msvcsharp.visual_sap_control
 		}
 		public void SettingsFormLoad(object sender, EventArgs e)
 		{
+			PasswordForm passwordform = new PasswordForm();
+			if (passwordform.ShowDialog() != DialogResult.OK) {
+				// The user canceled.
+				this.Close();
+			}
 			UpdateGrid();
 		}
 		
@@ -129,8 +133,7 @@ namespace msvcsharp.visual_sap_control
 		
 		void DeleteProcuctButtonClick(object sender, EventArgs e)
 		{
-			if (MessageBox.Show("Delete selected product?", "Deletion Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes) 
-			{
+			if (MessageBox.Show("Delete selected product?", "Deletion Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes) {
 				productsDataList.RemoveAt(dataGridView.CurrentCell.RowIndex);
 				ClearTextBoxes();
 				UpdateGrid();
@@ -147,8 +150,7 @@ namespace msvcsharp.visual_sap_control
 		}
 		void EditProductButtonClick(object sender, EventArgs e)
 		{
-			if (MessageBox.Show("Edit selected product?", "Edition Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes) 
-			{
+			if (MessageBox.Show("Edit selected product?", "Edition Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes) {
 				productsDataList[dataGridView.CurrentCell.RowIndex] = GetProduct();
 				UpdateGrid();
 			}
