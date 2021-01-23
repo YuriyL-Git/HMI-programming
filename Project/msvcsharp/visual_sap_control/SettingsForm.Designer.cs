@@ -26,6 +26,9 @@ namespace msvcsharp.visual_sap_control
 		private System.Windows.Forms.Button deleteProcuctButton;
 		private System.Windows.Forms.Label fontLabel;
 		private System.Windows.Forms.OpenFileDialog openFileDialog;
+		private System.Windows.Forms.GroupBox groupBox2;
+		private System.Windows.Forms.RadioButton comRadioButton;
+		private System.Windows.Forms.RadioButton usbRadioButton;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -67,8 +70,12 @@ namespace msvcsharp.visual_sap_control
 			this.deleteProcuctButton = new System.Windows.Forms.Button();
 			this.fontLabel = new System.Windows.Forms.Label();
 			this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.comRadioButton = new System.Windows.Forms.RadioButton();
+			this.usbRadioButton = new System.Windows.Forms.RadioButton();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
 			this.groupBox1.SuspendLayout();
+			this.groupBox2.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// dataGridView
@@ -239,11 +246,43 @@ namespace msvcsharp.visual_sap_control
 			this.openFileDialog.FileName = "openFileDialog";
 			this.openFileDialog.ShowHelp = true;
 			// 
+			// groupBox2
+			// 
+			this.groupBox2.Controls.Add(this.usbRadioButton);
+			this.groupBox2.Controls.Add(this.comRadioButton);
+			this.groupBox2.Location = new System.Drawing.Point(773, 181);
+			this.groupBox2.Name = "groupBox2";
+			this.groupBox2.Size = new System.Drawing.Size(253, 155);
+			this.groupBox2.TabIndex = 7;
+			this.groupBox2.TabStop = false;
+			this.groupBox2.Text = "Connection Type";
+			// 
+			// comRadioButton
+			// 
+			this.comRadioButton.Location = new System.Drawing.Point(16, 40);
+			this.comRadioButton.Name = "comRadioButton";
+			this.comRadioButton.Size = new System.Drawing.Size(104, 24);
+			this.comRadioButton.TabIndex = 0;
+			this.comRadioButton.TabStop = true;
+			this.comRadioButton.Text = "COM";
+			this.comRadioButton.UseVisualStyleBackColor = true;
+			// 
+			// usbRadioButton
+			// 
+			this.usbRadioButton.Location = new System.Drawing.Point(16, 82);
+			this.usbRadioButton.Name = "usbRadioButton";
+			this.usbRadioButton.Size = new System.Drawing.Size(104, 24);
+			this.usbRadioButton.TabIndex = 1;
+			this.usbRadioButton.TabStop = true;
+			this.usbRadioButton.Text = "USB";
+			this.usbRadioButton.UseVisualStyleBackColor = true;
+			// 
 			// SettingsForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1277, 473);
+			this.Controls.Add(this.groupBox2);
 			this.Controls.Add(this.fontLabel);
 			this.Controls.Add(this.deleteProcuctButton);
 			this.Controls.Add(this.editProductButton);
@@ -262,6 +301,7 @@ namespace msvcsharp.visual_sap_control
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
+			this.groupBox2.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
